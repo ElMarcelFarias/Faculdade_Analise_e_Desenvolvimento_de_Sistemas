@@ -1,21 +1,13 @@
 programa
-{
-
-	real numero1
-	real numero2
-	real soma
+{	
 	
+	inteiro numero
 	funcao inicio()
 	{
-		escreva("Informe a sua primeira nota: ")
-		leia(numero1)
+		escreva("Informe um número: ")
+		leia(numero)
 
-		escreva("Informe a sua primeira nota: ")
-		leia(numero2)
-
-		soma = numero1 + numero2 
-
-		escreva("Está é a soma: ", soma)
+		escreva("Número digitado: ", numero, " o dobro: ", numero*2)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -23,7 +15,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 191; 
+ * @POSICAO-CURSOR = 166; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
