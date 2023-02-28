@@ -1,9 +1,11 @@
 programa
 {
-	real tamanhoPintar, qntMetrosLata = (3 * 18), precoLata = 80.0, precoTotal
+	real  precoLata = 80.0, precoTotal
+	inteiro tamanhoPintar, qntMetrosLata = (3 * 18)
 	funcao inicio()
 	{
-		escreva("Informe o tamanho a ser pintado em metros quadrados: ")
+		escreva("----SOFTWARE DE CÁLCULO DE METROS PARA PINTURA----")
+		escreva("Informe o tamanho a ser pintado em metros quadrados: Ex.:(24) ")
 		leia(tamanhoPintar)
 
 		tamanhoPintar = (tamanhoPintar/3)/18
@@ -16,7 +18,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 106; 
+ * @POSICAO-CURSOR = 317; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

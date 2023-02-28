@@ -7,13 +7,15 @@ programa
 	
 	funcao inicio()
 	{
+
+		escreva("----SOFTWARE DE CÁLCULO PARA CONCESSIONÁRIA----")
 		escreva("Informe o nome do vendedor: ")
 		leia(nomeVendedor)
 
-		escreva("Informe a sua quantidade vendida: ")
+		escreva("Informe a sua quantidade de carros vendida: Ex.:(3) ")
 		leia(qtdVendido)
 
-		escreva("Total de vendas da empresa: ")
+		escreva("Informe o total monetário de vendas da concessionária: Ex.:(450.689)")
 		leia(totalVendido)
           
 		resultadoSalario = (50 * qtdVendido) + 500
@@ -36,7 +38,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 314; 
+ * @POSICAO-CURSOR = 332; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

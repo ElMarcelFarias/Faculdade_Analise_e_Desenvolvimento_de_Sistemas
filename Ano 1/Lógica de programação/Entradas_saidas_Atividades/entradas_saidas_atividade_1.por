@@ -1,13 +1,5 @@
 programa
 {
-	//Produzido por Otávio Henrique Vicente
-	
-	//Criaremos um programa que simula uma atualização de dados cadastrais de um 
-	//funcionário em uma empresa. Solicitaremos: nome completo, telefone, e-mail, 
-	//logradouro, número da casa, se a pessoa é doadora de sangue e seu último 
-	//salário. Ainda não faremos nenhuma validação. Apenas faremos o uso dos tipos 
-	//de dados mais adequados para cada situação (cadeia de caracteres ou texto, 
-	//número inteiro, número real).
 	
 	funcao inicio()
 	{
@@ -18,7 +10,7 @@ programa
 		escreva("Nome: ");
 		leia(nome);
 
-		escreva("Telefone: ");
+		escreva("Telefone Ex.: (47) 99928-0014 ");
 		leia(telefone);
 
 		escreva("E-mail: ");
@@ -53,7 +45,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 482; 
+ * @POSICAO-CURSOR = 295; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

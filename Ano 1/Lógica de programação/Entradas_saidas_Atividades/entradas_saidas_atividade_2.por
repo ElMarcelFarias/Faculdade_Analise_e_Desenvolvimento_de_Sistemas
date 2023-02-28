@@ -1,22 +1,16 @@
 programa
 {
-	//Produzido po Otávio Henrique Vicente
-	
-	//Agora vamos criar um programa que simula uma venda de uma loja para um cliente 
-	//final. Então, precisamos de duas informações: valor final da compra e a quantidade 
-	//de parcelas. Ainda não aplicaremos questões como formas de pagamento e juros, 
-	//por exemplo. Isso faremos a frente.
 	
 	funcao inicio()
 	{
 		real valorCompra, valorParcela;
 		inteiro numParcelas;
 
-		escreva("Valor total da compra: ");
+		escreva("Valor total da compra: Ex.: (2.000)");
 		leia(valorCompra);
 
-		escreva("Deseja parcelar em quantas vezes? ")
-		leia(numParcelas);
+		escreva("Deseja parcelar em quantas vezes? Ex.: (2)")
+		leia(numParcelas);s
 
 		valorParcela = valorCompra / numParcelas;
 
@@ -31,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 649; 
+ * @POSICAO-CURSOR = 240; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

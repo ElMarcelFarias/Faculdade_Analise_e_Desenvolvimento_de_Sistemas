@@ -6,16 +6,16 @@ programa
 	funcao inicio()
 	{
 		escreva("-----LOJA DE ROUPAS------\n")
-		escreva("Informe o valor de custo deste produto! ")
+		escreva("Informe o valor de custo deste produto! Ex.:(52.6)")
 		leia(valor_custo)
 
-		escreva("Informe a porcentagem de comissão a partir do custo: ")
+		escreva("Informe a porcentagem de comissão a partir do custo: Ex.:(5)")
 		leia(perc_comissao)
 
-		escreva("Informe a porcentagem de margem de lucro: ")
+		escreva("Informe a porcentagem de margem de lucro: Ex.:(5)")
 		leia(perc_margem_lucro)
 
-		escreva("Informe a porcentagem de impostos governamentais (GOV)")
+		escreva("Informe a porcentagem de impostos governamentais (GOV) Ex.:(5)")
 		leia(perc_imposto_gov)
 	
 	
@@ -26,6 +26,8 @@ programa
 	
 		valor_comissao = valor_custo * perc_comissao
 		valor_margem_lucro = (valor_custo * perc_comissao) * perc_margem_lucro
+		// valor_margem_lucro = (valor_custo + valor_comissao) * perc_margem_lucro
+		
 		valor_imposto_gov = (valor_custo * perc_comissao) * (perc_margem_lucro *  perc_imposto_gov)
 		valor_final = valor_comissao + valor_margem_lucro + valor_imposto_gov + valor_custo
 		
@@ -44,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 784; 
+ * @POSICAO-CURSOR = 367; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
