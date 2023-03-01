@@ -1,11 +1,12 @@
 programa
 {
+	inteiro formaCombustivel
+	real qtdCombustivel, valorCombustivel, valorFinal, valorGasolina = 5.09, valorAlcool = 4.39, valorDiesel =  6.39
+	cadeia tipoComb, error
 	
 	funcao inicio()
 	{
-		inteiro formaCombustivel
-		real qtdCombustivel, valorCombustivel, valorFinal, valorGasolina = 5.09, valorAlcool = 4.39, valorDiesel =  6.39
-		cadeia tipoComb, error
+		
 
 		escreva("______SOFTWARE PARA POSTO DE GASOLINA______\n")
 
@@ -28,7 +29,7 @@ programa
 		
 		
 
-		escreva("------Quantos litros de Combustível")
+		escreva("------Quantos litros de Combustível \n")
 		leia(qtdCombustivel)
 
 		se (formaCombustivel == 2) {
@@ -86,7 +87,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1255; 
+ * @POSICAO-CURSOR = 829; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
