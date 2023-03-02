@@ -1,10 +1,11 @@
 programa
 {
 	real qtdCombustivel, valorCombustivel, valorFinal, valorGasolina = 5.09, valorAlcool = 4.39, valorDiesel =  6.39
-	cadeia tipoComb, error, formaCombustivel
+	cadeia tipoComb, error="", formaCombustivel
 	
 	funcao inicio()
 	{
+		
 		
 
 		escreva("--------SOFTWARE PARA POSTO DE GASOLINA---------\n")
@@ -88,7 +89,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1129; 
+ * @POSICAO-CURSOR = 842; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

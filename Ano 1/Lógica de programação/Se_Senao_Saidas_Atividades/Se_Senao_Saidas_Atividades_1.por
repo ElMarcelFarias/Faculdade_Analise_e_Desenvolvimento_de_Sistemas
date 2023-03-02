@@ -17,14 +17,14 @@ programa
 		leia(maioridadeCivil)
 		escreva("\n")
 
-		se (maioridadeCivil < 0) {
+		se (maioridadeCivil <= 0) {
 			escreva("A maioridade civil informada é negativa. Por isso, o programa será encerrado. ")	
 		} senao {
 			escreva("Informe a sua idade: Ex.:(17) ")
 			leia(idade)
 			escreva("\n")
 
-			se (idade < 0) {
+			se (idade <= 0) {
 				escreva("A idade informada é negativa. Por isso, o programa será encerrado. ")	
 			} senao {
 				se (idade < maioridadeCivil)	{
@@ -41,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 271; 
+ * @POSICAO-CURSOR = 862; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

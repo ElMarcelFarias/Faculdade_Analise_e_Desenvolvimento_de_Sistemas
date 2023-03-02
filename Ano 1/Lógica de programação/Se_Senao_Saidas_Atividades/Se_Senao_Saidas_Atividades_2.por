@@ -20,7 +20,7 @@ programa
 		se(qtdMacas <= 0) {
 			escreva("A quantidade de maças vendidas é zero ou negativa. Por isso, o programa será encerrado.")	
 		} senao {
-			se (qtdMacas < 12) {
+			se (qtdMacas <= 12) {
 				valorMacas = 1.30
 			} senao {
 				valorMacas = 1.00	
@@ -39,7 +39,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 593; 
+ * @POSICAO-CURSOR = 615; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

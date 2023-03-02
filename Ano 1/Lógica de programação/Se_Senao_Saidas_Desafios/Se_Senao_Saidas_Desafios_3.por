@@ -25,6 +25,8 @@ programa
 			escreva("| Valor Quociente: "+quociente+"\n")
 			escreva("| Valor Resto: "+ resto+"\n")
 			escreva("| Você venceu o desafio do algoritmo")
+		} senao {
+			escreva("VOCÊ PERDEU!!!!")	
 		}
 		
 	}
@@ -34,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 301; 
+ * @POSICAO-CURSOR = 342; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

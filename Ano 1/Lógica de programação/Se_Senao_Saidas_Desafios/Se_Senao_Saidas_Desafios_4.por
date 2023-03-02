@@ -21,11 +21,11 @@ programa
 
 
 		se (nrHoras > 160) {
-			salarioBruto = (valorHoras*160)
-			salarioTotal = (valorHoras*160) + valorExtras
+			salarioBruto = (valorHoras*nrHoras)
+			salarioTotal = (valorHoras*nrHoras) + valorExtras
 		} senao {
-			salarioBruto = (valorHoras*160)
-			salarioTotal = (valorHoras*160)
+			salarioBruto = (valorHoras*nrHoras)
+			salarioTotal = (valorHoras*nrHoras)
 			valorExtras = 0.00
 		} 
 		
@@ -46,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 556; 
+ * @POSICAO-CURSOR = 718; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
