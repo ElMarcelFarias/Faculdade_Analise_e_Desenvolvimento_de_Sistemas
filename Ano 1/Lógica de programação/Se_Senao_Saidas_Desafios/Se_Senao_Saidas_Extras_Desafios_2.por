@@ -57,7 +57,7 @@ programa
 			escreva ("o valor é igual a 4")
 			pare
 	
-			caso 'Z':		//testa se o valor é igual a 2
+			caso 'Z':		//testa se o valor é igual a 2 aaaa
 			limpa()
 			escreva ("o valor é igual a 5")
 			pare
@@ -73,7 +73,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1606; 
+ * @POSICAO-CURSOR = 1666; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
