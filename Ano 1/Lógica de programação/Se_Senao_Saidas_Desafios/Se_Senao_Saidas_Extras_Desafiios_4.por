@@ -26,7 +26,7 @@ programa
 
 		escreva("-----------------------------------------------------\n")
 		escreva("-1° Rodada:")
-		escreva("-(1) " + competidor1 + " X " + "(2) \n"+ competidor2)
+		escreva("-(1) " + competidor1 + " X " + "(2) "+ competidor2+"\n")
 		escreva("-Informe o vencedor Ex.:(1) ou (2): ")
 		leia(vencedor)
 		escreva("-----------------------------------------------------\n")
@@ -85,7 +85,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 460; 
+ * @POSICAO-CURSOR = 413; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
