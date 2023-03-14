@@ -1,14 +1,13 @@
 programa
 {
-	real n1,n2
-	inteiro opcaoCalculo, n1mod,n2mod
+	inteiro opcaoCalculo, n1,n2
 	funcao inicio()
 	{
 		escreva("--------------CÁLCULO--------------\n")
 		escreva("-Cálculos padrões\n")
-		escreva("-Informe 1° número para o cálculo Ex.:(2.5) \n")
+		escreva("-Informe 1° número para o cálculo Ex.:(2) \n")
 		leia(n1)
-		escreva("-Informe 2° número para o cálculo Ex.:(2.0) \n")
+		escreva("-Informe 2° número para o cálculo Ex.:(2) \n")
 		leia(n2)
 
 		limpa()
@@ -49,12 +48,8 @@ programa
 			pare
 
 			caso 5: 
-				escreva("-Informe 1° número para o cálculo Ex.:(2.5) \n")
-				leia(n1mod)
-				escreva("-Informe 2° número para o cálculo Ex.:(2.0) \n")
-				leia(n2mod)
-				n1mod = n1mod % n2mod
-				escreva("resto da divisão do 1° número / 2° número é "+ n1mod)
+				n1 = n1 % n2
+				escreva("resto da divisão do 1° número / 2° número é "+ n1)
 			pare
 			
 			caso 6: 
@@ -64,12 +59,8 @@ programa
 			pare
 			
 			caso 7: 
-				escreva("-Informe 1° número para o cálculo Ex.:(2.5) \n")
-				leia(n1mod)
-				escreva("-Informe 2° número para o cálculo Ex.:(2.0) \n")
-				leia(n2mod)
-				n2mod = n2mod % n1mod
-				escreva("resto da divisão do 2° número / 1° número é "+ n2mod)
+				n2 = n2 % n1
+				escreva("resto da divisão do 2° número / 1° número é "+ n2)
 			pare
 			
 			caso 8: 
@@ -90,7 +81,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2055; 
+ * @POSICAO-CURSOR = 143; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
