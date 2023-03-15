@@ -5,45 +5,47 @@ programa
 	{
 		inteiro numero
 
-		escreva("Digite um número correspondente a um mês: ")
+
+		escreva("Programa que mostre um mês correspondente ao número! \n")
+		escreva("Digite um número correspondente a um mês: Ex.:(5) ")
 		leia(numero)
 
 		escolha(numero) {
 			caso 1: 
-				escreva("Janeiro")
+				escreva("O mês é Janeiro")
 				pare
 			caso 2: 
-				escreva("Fevereiro")
+				escreva("O mês é Fevereiro")
 				pare
 			caso 3: 
-				escreva("Março")
+				escreva("O mês é Março")
 				pare
 			caso 4: 
-				escreva("Abril")
+				escreva("O mês é Abril")
 				pare
 			caso 5: 
-				escreva("Maio")
+				escreva("O mês é Maio")
 				pare
 			caso 6: 
-				escreva("Junho")
+				escreva("O mês é Junho")
 				pare
 			caso 7: 
-				escreva("Julho")
+				escreva("O mês é Julho")
 				pare
 			caso 8: 
-				escreva("Agosto")
+				escreva("O mês é Agosto")
 				pare
 			caso 9: 
-				escreva("Setembro")
+				escreva("O mês é Setembro")
 				pare
 			caso 10: 
-				escreva("Outubro")
+				escreva("O mês é Outubro")
 				pare
 			caso 11: 
-				escreva("Novembro")
+				escreva("O mês é Novembro")
 				pare
 			caso 12: 
-				escreva("Dezembro")
+				escreva("O mês é Dezembro")
 				pare
 			caso contrario: 
 				escreva("Informe um número correto: Ex.:(12)")				
@@ -57,7 +59,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 441; 
+ * @POSICAO-CURSOR = 272; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

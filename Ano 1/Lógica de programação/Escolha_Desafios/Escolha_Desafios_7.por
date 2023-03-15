@@ -1,6 +1,6 @@
 programa
 {
-	cadeia formaLeague
+	cadeia formaLeague, timesFinais
 	caracter divisaoLeague
 	funcao inicio()
 	{
@@ -9,7 +9,7 @@ programa
 		escreva("Informe a conferência! ")
 		leia(formaLeague)
 
-		se(formaLeague == "AFC") {
+		se((formaLeague == "AFC") ou (formaLeague == "afc")) {
 			limpa()
 			escreva("-Qual divisão mostrar? \n")
 			escreva("-East  (E)\n")
@@ -21,38 +21,22 @@ programa
 			escolha(divisaoLeague) {
 				caso 'E':
 					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Bills\n")
-					escreva("-Dolphins\n")
-					escreva("-Patriots\n")
-					escreva("-Jets\n")
+					timesFinais = "LISTA DE TIMES\n -Bills\n -Dolphins\n -Patriots\n -Jets\n"
 				pare
 
 				caso 'N':
 					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Ravens\n")
-					escreva("-Bengals\n")
-					escreva("-Browns\n")
-					escreva("-Steelers\n")
+					timesFinais = "LISTA DE TIMES\n -Ravens\n -Bengals\n -Browns\n -Steelers\n"
 				pare
 
 				caso 'S':
 					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Texans\n")
-					escreva("-Colts\n")
-					escreva("-Jaguars\n")
-					escreva("-Titans\n")
+					timesFinais = "LISTA DE TIMES\n -Texans\n -Colts\n -Jaguars\n -Titans\n"
 				pare
 
 				caso 'W':
 					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Broncos\n")
-					escreva("-Chiefs\n")
-					escreva("-Raiders\n")
-					escreva("-Chargers\n")
+					timesFinais = "LISTA DE TIMES\n -Broncos\n -Chiefs\n -Raiders\n -Chargers\n"
 				pare
 
 				caso contrario:
@@ -62,57 +46,47 @@ programa
 			}
 			
 			
+		} senao se ((formaLeague == "NFC") ou (formaLeague == "nfc")){
+			limpa()
+			escreva("-Qual divisão mostrar? \n")
+			escreva("-East  (E)\n")
+			escreva("-North (N)\n")
+			escreva("-South (S)\n")
+			escreva("-West  (W)\n")
+			leia(divisaoLeague)
+
+			escolha(divisaoLeague) {
+				caso 'E':
+					limpa()
+					timesFinais = "LISTA DE TIMES\n -Cowboys\n -Giants\n -Eagles\n -Redskins\n"
+				pare
+
+				caso 'N':
+					limpa()
+					timesFinais = "LISTA DE TIMES\n -Bears\n -Lions\n -Packers\n -Vikings\n"
+				pare
+
+				caso 'S':
+					limpa()
+					timesFinais = "LISTA DE TIMES\n -Falcons\n -Panthers\n -Saints\n -Buccaneers\n"
+				pare
+
+				caso 'W':
+					limpa()
+					timesFinais = "LISTA DE TIMES\n -Cardinals\n -49ers\n -Seahawks\n -Rams\n"
+				pare
+
+				caso contrario:
+					escreva("Escolha uma opção correta!")
+			
+			}
 		} senao {
-			limpa()
-			escreva("-Qual divisão mostrar? \n")
-			escreva("-East  (E)\n")
-			escreva("-North (N)\n")
-			escreva("-South (S)\n")
-			escreva("-West  (W)\n")
-			leia(divisaoLeague)
-
-			escolha(divisaoLeague) {
-				caso 'E':
-					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Cowboys\n")
-					escreva("-Giants\n")
-					escreva("-Eagles\n")
-					escreva("-Redskins\n")
-				pare
-
-				caso 'N':
-					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Bears\n")
-					escreva("-Lions\n")
-					escreva("-Packers\n")
-					escreva("-Vikings\n")
-				pare
-
-				caso 'S':
-					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Falcons\n")
-					escreva("-Panthers\n")
-					escreva("-Saints\n")
-					escreva("-Buccaneers\n")
-				pare
-
-				caso 'W':
-					limpa()
-					escreva("LISTA DE TIMES\n")
-					escreva("-Cardinals\n")
-					escreva("-49ers\n")
-					escreva("-Seahawks\n")
-					escreva("-Rams\n")
-				pare
-
-				caso contrario:
-					escreva("Escolha uma opção correta!")
-			
-			}
+			escreva("OPÇÃO ERRADA")	
 		}
+
+		escreva(timesFinais)
+
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -120,7 +94,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 375; 
+ * @POSICAO-CURSOR = 1146; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

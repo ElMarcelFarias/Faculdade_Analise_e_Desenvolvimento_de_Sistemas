@@ -1,6 +1,6 @@
 programa
 {
-	cadeia nameUser, nameCar
+	cadeia nameUser, nameCar
 	inteiro opcaoCar, dateCar
 	real priceCar
 	funcao inicio()
@@ -22,8 +22,9 @@ programa
 			caso 1: 
 				escreva("-Informe o ano do carro conversível Ex.:(2015) \n")
 				leia(dateCar)
-
+				//mudar a lógica do exercicio para escolha
 				escreva(dateCar)
+				
 				se(dateCar <= 2015){
 					nameCar = "Chevrolet Camaro conversível "
 					priceCar = 200.00
@@ -116,7 +117,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1259; 
+ * @POSICAO-CURSOR = 834; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

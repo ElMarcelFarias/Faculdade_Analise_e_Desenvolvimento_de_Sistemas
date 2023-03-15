@@ -1,6 +1,6 @@
 programa
 {
-	inteiro selectMovie
+	inteiro selectMovie
 	cadeia movieName
 	funcao inicio()
 	{
@@ -22,7 +22,7 @@ programa
 				se (selectMovie == 1) {
 					movieName = "Ex_Machina: Instinto Artificial"
 				} senao {
-					movieName = "Minority Repor"
+					movieName = "Minority Report"
 				}
 				
 			pare
@@ -63,7 +63,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 227; 
+ * @POSICAO-CURSOR = 284; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

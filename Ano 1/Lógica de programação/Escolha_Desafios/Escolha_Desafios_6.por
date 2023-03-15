@@ -1,6 +1,6 @@
 programa
 {
-	inteiro mes
+	inteiro mes
 	funcao inicio()
 	{
 		escreva("SOFTWARE PARA MOSTRAR O MÊS \n")
@@ -15,34 +15,34 @@ programa
 				escreva("Fevereiro “Este mês tem 28 dias em anos comuns e 29 em anos bissextos.”")
 				pare
 			caso 3: 
-				escreva("Março")
+				escreva("Março este mês tem 31 dias ")
 				pare
 			caso 4: 
-				escreva("Abril")
+				escreva("Abril este mês tem 30 dias")
 				pare
 			caso 5: 
-				escreva("Maio")
+				escreva("Maio este mês tem 31 dias")
 				pare
 			caso 6: 
-				escreva("Junho")
+				escreva("Junho este mês tem 30 dias")
 				pare
 			caso 7: 
-				escreva("Julho")
+				escreva("Julho este mês tem 31 dias")
 				pare
 			caso 8: 
-				escreva("Agosto")
+				escreva("Agosto este mês tem 31 dias")
 				pare
 			caso 9: 
-				escreva("Setembro")
+				escreva("Setembro este mês tem 30 dias")
 				pare
 			caso 10: 
-				escreva("Outubro")
+				escreva("Outubro este mês tem 31 dias")
 				pare
 			caso 11: 
-				escreva("Novembro")
+				escreva("Novembro este mês tem 30 dias")
 				pare
 			caso 12: 
-				escreva("Dezembro")
+				escreva("Dezembro este mês tem 31 dias")
 				pare
 			caso contrario:
 				escreva("Número inválido")
@@ -55,7 +55,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 48; 
+ * @POSICAO-CURSOR = 273; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
