@@ -1,13 +1,15 @@
 programa
 {
 	inclua biblioteca Texto --> t
-	inteiro age, totalAge, contadorMedia
+	inteiro age, totalAge, contadorMedia, contadorM, contadorF
 	real salarioM, salarioF, TotalsalarioF, TotalsalarioM, totalGrupo
 	cadeia gender, choose
 	funcao inicio()
 	{
 		logico aux = verdadeiro
 		contadorMedia = 0
+		contadorM = 0
+		contadorF = 0
 		TotalsalarioF = 0.00
 		TotalsalarioM = 0.00
 		totalAge = 0
@@ -29,10 +31,12 @@ programa
 			se (gender == "M") {
 			 	escreva("-Informe seu salário masculino Ex.:(3.000) ")
 				leia(salarioM)
+				contadorM = contadorM + 1
 				TotalsalarioM = TotalsalarioM + salarioM
 			} senao {
 				escreva("-Informe seu salário feminino Ex.:(3.000) ")
 				leia(salarioF)
+				contadorF = contadorF + 1
 				TotalsalarioF = TotalsalarioF + salarioF
 			}
 			
@@ -50,14 +54,14 @@ programa
 		limpa()
 		totalGrupo = (TotalsalarioM + TotalsalarioF)/contadorMedia
 		age = (totalAge/contadorMedia)
-		TotalsalarioF = (TotalsalarioF/contadorMedia)
-		TotalsalarioM = (TotalsalarioM/contadorMedia)
+		TotalsalarioF = (TotalsalarioF/contadorF)
+		TotalsalarioM = (TotalsalarioM/contadorM)
 
 		escreva("---------------------GESTÃO SOFTWARE-----------------------\n")
 		escreva("-\n")
 		escreva("-Média de salário do grupo .: " + totalGrupo + "\n")
 		escreva("-Média de idades .: " + age + "\n")
-		escreva("-Média de salários do gênero Feminino .: " + TotalsalarioF + "\n")
+		escreva("-Média de salários do gênero Feminino .: " + TotalsalarioF + "\n")
 		escreva("-Média de salários do gênero Masculino .: " + TotalsalarioM + "\n")
 		escreva("-\n")
 		escreva("---------------------GESTÃO SOFTWARE-----------------------\n")
@@ -68,7 +72,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 764; 
+ * @POSICAO-CURSOR = 1430; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
