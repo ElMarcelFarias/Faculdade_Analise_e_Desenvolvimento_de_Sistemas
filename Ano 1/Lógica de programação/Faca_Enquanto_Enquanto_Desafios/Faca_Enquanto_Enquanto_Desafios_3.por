@@ -28,13 +28,13 @@ programa
 			
 			gender = t.caixa_alta(gender)
 
+			
+		 	escreva("-Informe seu salário Ex.:(3.000) ")
 			se (gender == "M") {
-			 	escreva("-Informe seu salário masculino Ex.:(3.000) ")
 				leia(salarioM)
 				contadorM = contadorM + 1
 				TotalsalarioM = TotalsalarioM + salarioM
 			} senao {
-				escreva("-Informe seu salário feminino Ex.:(3.000) ")
 				leia(salarioF)
 				contadorF = contadorF + 1
 				TotalsalarioF = TotalsalarioF + salarioF
@@ -72,7 +72,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1430; 
+ * @POSICAO-CURSOR = 1302; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
