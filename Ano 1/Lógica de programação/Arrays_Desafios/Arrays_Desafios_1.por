@@ -51,25 +51,8 @@ programa
 				
 			} enquanto(validaNumero != falso)
 
-			/*
-			enquanto (validaNumero) {
-				
-				escreva("Informe o número do apartamento: Ex.:(5) ")
-				leia(numeroApt[i])
-					
-				para(inteiro b = 0; b < i; b++) { 
-					se (numeroApt[i] == numeroApt[b]) {
-						validaNumero = verdadeiro
-					} senao {
-						validaNumero = falso	
-					}
-				}
-				
-
-			}
-			*/
-
 			
+
 
 			escreva("Informe a quantidade de moradores: Ex.:(4)")
 			leia(qtdMoradores[i])
@@ -120,7 +103,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1756; 
+ * @POSICAO-CURSOR = 1812; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
