@@ -20,6 +20,7 @@ programa
 			para(inteiro j = 0; j < 3; j++) {
 				escreva("Posição[", (i + 1), "][" + (j + 1) + " ] = " + matriz[i][j] + "\n")	
 			}	
+			escreva("\n")
 		}
 	}
 }
@@ -28,7 +29,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 125; 
+ * @POSICAO-CURSOR = 219; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {matriz, 7, 10, 6};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
