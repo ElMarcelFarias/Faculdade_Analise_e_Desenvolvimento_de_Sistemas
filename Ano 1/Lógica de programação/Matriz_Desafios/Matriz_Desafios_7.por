@@ -1,6 +1,6 @@
 programa
 {
-	real notasCampeonato[4][3]
+	real notasCampeonato[4][3], potuacaoTotal[4], totalPontuacao = 0.00, totalNotasArray[4]
 	logico validaNumero, auxMaiorMenor, auxChoose = verdadeiro
 	cadeia nomeEquipes[4]
 	inteiro aux = 0, choose
@@ -10,7 +10,7 @@ programa
 		para(inteiro i = 0 ; i < 4; i++) {
 			escreva("-Informe o nome da "+(i+1)+"° equipe: " )
 			leia(nomeEquipes[i])
-
+			totalPontuacao = 0.00
 			para(inteiro c = 0; c < 3; c++) {
 				faca{
 					escreva("-Informe as notas do time "+ nomeEquipes[i] + ". Ex.:(5.6) ")
@@ -32,10 +32,18 @@ programa
 							validaNumero = falso	
 						}
 					}
+
+					se((nao validaNumero) e (nao auxMaiorMenor)) {
+						totalPontuacao = notasCampeonato[i][c] + totalPontuacao
+					}
+
+					
 					
 				}enquanto((auxMaiorMenor != falso) ou (validaNumero != falso))
 				
 			}
+
+			totalNotasArray[i] = totalPontuacao
 
 		}
 
@@ -59,9 +67,17 @@ programa
 				pare
 
 				caso 2:
+					escreva("VER O NOME DAS EQUIPES \n")
+					para(inteiro h = 0; h < 4; h++) {
+						escreva("--->"+nomeEquipes[h]+" \n")
+					}
 				pare
 
 				caso 3:
+					para(inteiro h = 0; h < 4; h++) {
+						escreva("--->"+totalNotasArray[h]+" \n")
+					}
+					
 				pare
 
 				caso 4:
@@ -72,7 +88,7 @@ programa
 					
 			}
 
-			escreva("-Deseja continuar a lista? (S)/(N)")
+			escreva("-Deseja continuar a lista? (verdadeiro)/(falso)")
 			leia(choose)
 			
 				
@@ -84,9 +100,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1696; 
+ * @POSICAO-CURSOR = 1033; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {notasCampeonato, 3, 6, 15}-{nomeEquipes, 5, 9, 11}-{aux, 6, 9, 3}-{i, 10, 15, 1}-{c, 14, 16, 1}-{z, 26, 18, 1};
+ * @SIMBOLOS-INSPECIONADOS = {totalPontuacao, 3, 47, 14}-{totalNotasArray, 3, 70, 15};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
