@@ -2,8 +2,8 @@ programa
 {
 	real notasCampeonato[4][3], potuacaoTotal[4], totalPontuacao = 0.00, totalNotasArray[4]
 	logico validaNumero, auxMaiorMenor, auxChoose = verdadeiro
-	cadeia nomeEquipes[4]
-	inteiro aux = 0, choose
+	cadeia nomeEquipes[4]
+	inteiro aux = 0, choose, chooseEquipe = 0, partidaVerificar = 0, valorAuxMaior = 0
 	funcao inicio()
 	{
 		escreva("------------------------------CAMPEONATO DESAFIO 7 ------------------------------\n")
@@ -69,18 +69,32 @@ programa
 				caso 2:
 					escreva("VER O NOME DAS EQUIPES \n")
 					para(inteiro h = 0; h < 4; h++) {
-						escreva("--->"+nomeEquipes[h]+" \n")
+						escreva("---> "+nomeEquipes[h]+" \n")
 					}
 				pare
 
 				caso 3:
+					limpa()
 					para(inteiro h = 0; h < 4; h++) {
-						escreva("--->"+totalNotasArray[h]+" \n")
+						escreva("---> "+nomeEquipes[h]+" ("+(h)+")\n")
 					}
-					
+					escreva("Informe a equipe...: Ex.:(2) ")
+					leia(chooseEquipe)
+					para(inteiro x = 0; x < 3; x++) {
+						escreva("---> "+(x+1)+"° Pontuação: "+ notasCampeonato[chooseEquipe][x] + " \n")	
+					}
+					escreva("---> Total de pontos: "+totalNotasArray[chooseEquipe] + " \n")
 				pare
 
 				caso 4:
+					escreva("Informe qual a partida deseja verificar Ex..: (2) \n")
+					leia(partidaVerificar)
+					para(inteiro b = 0; b < 4; b++) {
+						se(notasCampeonato[b][partidaVerificar] > valorAuxMaior) {
+							valorAuxMaior = b
+						}
+					}
+					escreva("-Nome da equipe: "+ nomeEquipes[valorAuxMaior]+"\n")
 				pare
 
 				caso 5:
@@ -88,8 +102,8 @@ programa
 					
 			}
 
-			escreva("-Deseja continuar a lista? (verdadeiro)/(falso)")
-			leia(choose)
+			escreva("-Deseja continuar a lista? S(verdadeiro) / F(falso)")
+			leia(auxChoose)
 			
 				
 		}
@@ -100,9 +114,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1033; 
+ * @POSICAO-CURSOR = 560; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {totalPontuacao, 3, 47, 14}-{totalNotasArray, 3, 70, 15};
+ * @SIMBOLOS-INSPECIONADOS = {notasCampeonato, 3, 6, 15}-{potuacaoTotal, 3, 29, 13}-{totalNotasArray, 3, 70, 15}-{nomeEquipes, 5, 8, 11};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
