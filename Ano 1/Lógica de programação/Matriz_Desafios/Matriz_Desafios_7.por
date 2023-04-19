@@ -3,7 +3,7 @@ programa
 	real notasCampeonato[4][3], potuacaoTotal[4], totalPontuacao = 0.00, totalNotasArray[4]
 	logico validaNumero, auxMaiorMenor, auxChoose = verdadeiro
 	cadeia nomeEquipes[4]
-	inteiro aux = 0, choose, chooseEquipe = 0, partidaVerificar = 0, valorAuxMaior = 0
+	inteiro aux = 0, choose, chooseEquipe = 0, partidaVerificar = 0, valorAuxMaior = 0, posicaoVencedor = 0, menorNumero = 0, posicaoMenorNumero = 0
 	funcao inicio()
 	{
 		escreva("------------------------------CAMPEONATO DESAFIO 7 ------------------------------\n")
@@ -49,6 +49,7 @@ programa
 
 		limpa()
 		enquanto(auxChoose) {
+			limpa()
 			escreva("-Ver tabela inteira (1) \n")
 			escreva("-Ver nome das equipes (2) \n")
 			escreva("-Ver a portuação de uma equipe em um determinado jogo (3) \n")
@@ -89,21 +90,42 @@ programa
 				caso 4:
 					escreva("Informe qual a partida deseja verificar Ex..: (2) \n")
 					leia(partidaVerificar)
+					partidaVerificar = partidaVerificar - 1
+					valorAuxMaior = 0
 					para(inteiro b = 0; b < 4; b++) {
 						se(notasCampeonato[b][partidaVerificar] > valorAuxMaior) {
-							valorAuxMaior = b
+							valorAuxMaior = notasCampeonato[b][partidaVerificar]
+							posicaoVencedor = b
+							
 						}
 					}
-					escreva("-Nome da equipe: "+ nomeEquipes[valorAuxMaior]+"\n")
+					escreva("-Nome da equipe vencedora da "+(partidaVerificar + 1)+"° partida: "+ nomeEquipes[posicaoVencedor]+"\n")
 				pare
 
 				caso 5:
+					escreva("Informe qual a partida deseja verificar Ex..: (2) \n")
+					leia(partidaVerificar)
+					partidaVerificar = partidaVerificar - 1
+					menorNumero = 0
+					menorNumero = notasCampeonato[0][partidaVerificar]
+					
+					para(inteiro i = 0; i < 4; i++) {
+						se (menorNumero > notasCampeonato[i][partidaVerificar]) {
+							menorNumero = notasCampeonato[i][partidaVerificar]
+							posicaoMenorNumero = i
+						} 
+					}
+
+					escreva("-Nome da equipe em ultimo lugar(perdedora) "+(partidaVerificar + 1)+"° partida: "+ nomeEquipes[posicaoMenorNumero]+"\n")
+
+					
 				pare
 					
 			}
 
 			escreva("-Deseja continuar a lista? S(verdadeiro) / F(falso)")
 			leia(auxChoose)
+			limpa()
 			
 				
 		}
@@ -114,9 +136,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 560; 
+ * @POSICAO-CURSOR = 3646; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {notasCampeonato, 3, 6, 15}-{potuacaoTotal, 3, 29, 13}-{totalNotasArray, 3, 70, 15}-{nomeEquipes, 5, 8, 11};
+ * @SIMBOLOS-INSPECIONADOS = {notasCampeonato, 3, 6, 15}-{potuacaoTotal, 3, 29, 13}-{totalNotasArray, 3, 70, 15}-{nomeEquipes, 5, 8, 11}-{valorAuxMaior, 6, 66, 13}-{posicaoVencedor, 6, 85, 15};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
