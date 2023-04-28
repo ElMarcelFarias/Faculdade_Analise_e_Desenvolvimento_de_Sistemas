@@ -3,7 +3,6 @@ programa
 	inclua biblioteca Texto --> t
 	cadeia racas[3] = {"Pitbull", "Vira-Lata", "Pastor Alemão"} 
 	cadeia matrizPitbull[3][3], matrizViraLata[3][3], matrizPastorAlemao[3][3]
-	
 	funcao inicio()
 	{
 		escreva("-------------------ADOÇÂO DE ANIMAIS-------------------\n")
@@ -61,6 +60,7 @@ programa
 				caso 2:
 					escreva("O "+ (i+1)+"° Pitbull já foi adotado? (SIM/NÃO) ")
 					leia(dados)
+					dados = t.caixa_alta(dados)
 				pare
 					
 			}
@@ -81,6 +81,7 @@ programa
 				caso 2:
 					escreva("O "+ (i+1)+"° Vira-Lata já foi adotado? (SIM/NÃO) ")
 					leia(dados)
+					dados = t.caixa_alta(dados)
 				pare	
 			}
 			
@@ -100,6 +101,7 @@ programa
 				caso 2:
 					escreva("O "+ (i+1)+"° Pastor Alemão já foi adotado? (SIM/NÃO) ")
 					leia(dados)
+					dados = t.caixa_alta(dados)
 				pare	
 			}
 		}
@@ -110,17 +112,17 @@ programa
 
 	funcao  escolhaVisualizacao() {
 		limpa()
-		inteiro aux 
-		escreva("------------------------------------------------------------------------------\n")
-		escreva("-Visualizações de cadastros! \n")
-		escreva("-Todos os animais (1) \n")
-		escreva("-Animais por raça (2) \n")
-		escreva("-Animais disponiveis para adoção (3) \n")
-		leia(aux)
-		escreva("------------------------------------------------------------------------------\n")
-		cadeia auxVisualizacao = "SIM"
-
-		enquanto(auxVisualizacao == "SIM"){
+		inteiro aux = 0
+		cadeia auxVerificacao = "SIM"
+		
+		enquanto(auxVerificacao == "SIM"){
+			escreva("------------------------------------------------------------------------------\n")
+			escreva("-Visualizações de cadastros! \n")
+			escreva("-Todos os animais (1) \n")
+			escreva("-Animais por raça (2) \n")
+			escreva("-Animais disponiveis para adoção (3) \n")
+			leia(aux)
+			escreva("------------------------------------------------------------------------------\n")
 			escolha (aux) {
 				caso 1:
 					escreva("Lista de Pitbull...:\n")
@@ -269,30 +271,39 @@ programa
 	
 				caso 3:
 					escreva("-Visualizar animais disponiveis para doação! \n")
-	
+					inteiro cont = 0
 					para(inteiro i = 0; i < 3; i++){
 						se(matrizPitbull[i][2] == "SIM") {	
+						     cont++ 
 							escreva("-"+ (i+1)+"° Pitbull está disponivel para doação...: "+matrizPitbull[i][2] + "\n")	
 						}
 					}
 	
 					para(inteiro i = 0; i < 3; i++){
 						se(matrizViraLata[i][2] == "SIM") {	
+							cont++ 
 							escreva("-"+ (i+1)+"° Vira-Lata está disponivel para doação...: "+matrizViraLata[i][2] + "\n")	
 						}
 					}
 	
 					para(inteiro i = 0; i < 3; i++){
 						se(matrizPastorAlemao[i][2] == "SIM") {	
+							cont++ 
 							escreva("-"+ (i+1)+"° Pastor Alemão está disponivel para doação...: "+matrizPastorAlemao[i][2] + "\n")	
 						}
 					}
+
+					se(cont == 0) {
+						escreva("Não temos cachorros disponiveis para adoção!! :( \n")	
+					}
 				pare
 			}
-			escreva("-Você deseja fazer outra pesquisa? (SIM) (NÃO)")
-			leia(auxVisualizacao)
-			auxVisualizacao = t.caixa_alta(auxVisualizacao)
+			escreva("-Você deseja visualizar novamente os cadastros? (SIM) (NÃO) ")
+			leia(auxVerificacao)
+
+			auxVerificacao = t.caixa_alta(auxVerificacao)
 		}
+		
 	}
 	
 	
@@ -302,7 +313,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1337; 
+ * @POSICAO-CURSOR = 7169; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {matrizPitbull, 5, 8, 13}-{matrizViraLata, 5, 29, 14}-{matrizPastorAlemao, 5, 51, 18};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
