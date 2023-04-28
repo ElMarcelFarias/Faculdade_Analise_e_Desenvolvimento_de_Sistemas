@@ -32,6 +32,8 @@ programa
 			}
 			
 		}
+
+		escolhaVisualizacao()
 		
 
 		
@@ -42,6 +44,7 @@ programa
 
 		cadeia dados = ""
 		se (auxRaca == "Pitbull") {
+			limpa()
 			escolha (j) {
 				caso 0:
 					escreva("Informe o nome do "+ (i+1)+"° Pitbull ")
@@ -61,6 +64,7 @@ programa
 			}
 			
 		} senao se (auxRaca == "Vira-Lata") {
+			limpa()
 			escolha (j) {
 				caso 0:
 					escreva("Informe o nome do "+ (i+1)+"° Vira-Lata ")
@@ -79,6 +83,7 @@ programa
 			}
 			
 		} senao {
+			limpa()
 			escolha (j) {
 				caso 0:
 					escreva("Informe o nome do "+ (i+1)+"° Pastor Alemão ")
@@ -100,15 +105,199 @@ programa
 		
 		retorne dados
 	}
+
+	funcao  escolhaVisualizacao() {
+		limpa()
+		inteiro aux 
+		escreva("------------------------------------------------------------------------------\n")
+		escreva("-Visualizações de cadastros! \n")
+		escreva("-Todos os animais (1) \n")
+		escreva("-Animais por raça (2) \n")
+		escreva("-Animais disponiveis para adoção (3) \n")
+		leia(aux)
+		escreva("------------------------------------------------------------------------------\n")
+
+		escolha (aux) {
+			caso 1:
+				escreva("Lista de Pitbull...:\n")
+				para(inteiro i = 0; i < 3; i++){
+					para(inteiro j = 0; j < 3; j++) {
+						escolha (j) {
+							caso 0:
+								escreva("-Nome do "+ (i+1)+"° Pitbull...: "+matrizPitbull[i][j] + "\n")
+							pare
+			
+							caso 1:
+								escreva("-Informações sobre o comportamento do "+ (i+1)+"° Pitbull...: "+ matrizPitbull[i][j] + "\n")
+							pare
+			
+							caso 2:
+								escreva("O "+ (i+1)+"° Pitbull já foi adotado...:" + matrizPitbull[i][j] + "\n")
+								escreva("\n")
+							pare
+								
+						}
+					}
+				}
+
+				escreva("\n\n")
+				
+				escreva("Lista de Vira-Lata...:\n")
+				para(inteiro i = 0; i < 3; i++){
+					para(inteiro j = 0; j < 3; j++) {
+						escolha (j) {
+							caso 0:
+								escreva("-Nome do "+ (i+1)+"° Vira-Lata...: "+matrizViraLata[i][j] + "\n")
+							pare
+			
+							caso 1:
+								escreva("-Informações sobre o comportamento do "+ (i+1)+"° Vira-Lata...: "+ matrizViraLata[i][j] + "\n")
+							pare
+			
+							caso 2:
+								escreva("O "+ (i+1)+"° Vira-Lata já foi adotado...:" + matrizViraLata[i][j] + "\n")
+								escreva("\n")
+							pare
+								
+						}
+					}
+				}
+
+				escreva("\n\n")
+				
+				escreva("Lista de Pastor Alemão...:\n")
+				para(inteiro i = 0; i < 3; i++){
+					para(inteiro j = 0; j < 3; j++) {
+						escolha (j) {
+							caso 0:
+								escreva("-Nome do "+ (i+1)+"° Pastor Alemão...: "+matrizPastorAlemao[i][j] + "\n")
+							pare
+			
+							caso 1:
+								escreva("-Informações sobre o comportamento do "+ (i+1)+"° Pastor Alemão...: "+ matrizPastorAlemao[i][j] + "\n")
+							pare
+			
+							caso 2:
+								escreva("O "+ (i+1)+"° Pastor Alemão já foi adotado...:" + matrizPastorAlemao[i][j] + "\n")
+								escreva("\n")
+							pare
+								
+						}
+					}
+				}
+				
+			pare
+
+			caso 2:
+				inteiro auxRacas
+				limpa()
+				escreva("-Visualizar Animais por raça! \n")
+				escreva("-Pitbull (1) \n")
+				escreva("-Vira-Lata (2) \n")
+				escreva("-Pastor Alemão (3) \n")
+				leia(auxRacas)
+
+				se (auxRacas == 1) {
+					para(inteiro i = 0; i < 3; i++){
+						para(inteiro j = 0; j < 3; j++) {
+							escolha (j) {
+								caso 0:
+									escreva("-Nome do "+ (i+1)+"° Pitbull...: "+matrizPitbull[i][j] + "\n")
+								pare
+				
+								caso 1:
+									escreva("-Informações sobre o comportamento do "+ (i+1)+"° Pitbull...: "+ matrizPitbull[i][j] + "\n")
+								pare
+				
+								caso 2:
+									escreva("O "+ (i+1)+"° Pitbull já foi adotado...:" + matrizPitbull[i][j] + "\n")
+									escreva("\n")
+								pare
+								
+							}
+						}
+					}
+					
+				} senao se (auxRacas == 2) {
+					para(inteiro i = 0; i < 3; i++){
+						para(inteiro j = 0; j < 3; j++) {
+							escolha (j) {
+								caso 0:
+									escreva("-Nome do "+ (i+1)+"° Vira-Lata...: "+matrizViraLata[i][j] + "\n")
+								pare
+				
+								caso 1:
+									escreva("-Informações sobre o comportamento do "+ (i+1)+"° Vira-Lata...: "+ matrizViraLata[i][j] + "\n")
+								pare
+				
+								caso 2:
+									escreva("O "+ (i+1)+"° Vira-Lata já foi adotado...:" + matrizViraLata[i][j] + "\n")
+									escreva("\n")
+								pare
+									
+							}
+						}
+					}
+				} senao {
+					para(inteiro i = 0; i < 3; i++){
+						para(inteiro j = 0; j < 3; j++) {
+							escolha (j) {
+								caso 0:
+									escreva("-Nome do "+ (i+1)+"° Pastor Alemão...: "+matrizPastorAlemao[i][j] + "\n")
+								pare
+				
+								caso 1:
+									escreva("-Informações sobre o comportamento do "+ (i+1)+"° Pastor Alemão...: "+ matrizPastorAlemao[i][j] + "\n")
+								pare
+				
+								caso 2:
+									escreva("O "+ (i+1)+"° Pastor Alemão já foi adotado...:" + matrizPastorAlemao[i][j] + "\n")
+									escreva("\n")
+								pare
+									
+							}
+						}
+					}
+				}
+	
+				
+			pare
+
+			caso 3:
+				escreva("-Visualizar animais disponiveis para doação! \n")
+
+				para(inteiro i = 0; i < 3; i++){
+					se(matrizPitbull[i][2] == "SIM") {	
+						escreva("-"+ (i+1)+"° Pitbull está disponivel para doação...: "+matrizPitbull[i][2] + "\n")	
+					}
+				}
+
+				para(inteiro i = 0; i < 3; i++){
+					se(matrizViraLata[i][2] == "SIM") {	
+						escreva("-"+ (i+1)+"° Vira-Lata está disponivel para doação...: "+matrizViraLata[i][2] + "\n")	
+					}
+				}
+
+				para(inteiro i = 0; i < 3; i++){
+					se(matrizPastorAlemao[i][2] == "SIM") {	
+						escreva("-"+ (i+1)+"° Pastor Alemão está disponivel para doação...: "+matrizPastorAlemao[i][2] + "\n")	
+					}
+				}
+			pare
+		}
+		
+	}
+	
+	
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2175; 
+ * @POSICAO-CURSOR = 6572; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {matrizPitbull, 4, 8, 13}-{matrizPastorAlemao, 4, 51, 18}-{matrizViraLata, 4, 29, 14};
+ * @SIMBOLOS-INSPECIONADOS = {matrizPitbull, 4, 8, 13}-{matrizViraLata, 4, 29, 14}-{matrizPastorAlemao, 4, 51, 18};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
