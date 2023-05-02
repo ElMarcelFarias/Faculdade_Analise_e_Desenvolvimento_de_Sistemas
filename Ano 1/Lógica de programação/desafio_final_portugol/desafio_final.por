@@ -298,10 +298,16 @@ programa
 					}
 				pare
 			}
-			escreva("-Você deseja visualizar novamente os cadastros? (SIM) (NÃO) ")
-			leia(auxVerificacao)
+			faca {
+				se((auxVerificacao != "SIM") e (auxVerificacao != "NAO")) {
+					escreva("Informe uma opção correta! \n")
+				}
+				escreva("-Você deseja visualizar novamente os cadastros? (SIM) (NÃO) ")
+				leia(auxVerificacao)
+				auxVerificacao = t.caixa_alta(auxVerificacao)
+			} enquanto((auxVerificacao != "SIM") e (auxVerificacao != "NAO"))
 
-			auxVerificacao = t.caixa_alta(auxVerificacao)
+			
 		}
 		
 	}
@@ -313,7 +319,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7169; 
+ * @POSICAO-CURSOR = 7686; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {matrizPitbull, 5, 8, 13}-{matrizViraLata, 5, 29, 14}-{matrizPastorAlemao, 5, 51, 18};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
