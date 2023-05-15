@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Desafio6 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("INFORME O PRIMEIRO LADO DO TRIANGULO ");
+		Float triang1 = sc.nextFloat();
+		
+		System.out.println("INFORME O SEGUNDO LADO DO TRIANGULO ");
+		Float triang2 = sc.nextFloat();
+		
+		System.out.println("INFORME O TERCEIRO LADO DO TRIANGULO ");
+		Float triang3 = sc.nextFloat();
+		
+		if((triang1 == triang2) || (triang1 == triang3) || ((triang3 == triang2))) {
+			System.out.println("Triângulo isósceles! ");
+		}
+	}
+}
