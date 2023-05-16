@@ -25,10 +25,10 @@ public class Desafio4 {
 			  System.out.println("VOGAL");
 			    break;
 		  default:
-			  if(letra.matches("[0-9]*")) {
-				  System.out.println("CARACTER INCOMPATIVEL");
-			  } else {
+			  if(letra.matches("[a-z]")) {
 				  System.out.println("CONSOANTE");
+			  } else {
+				  System.out.println("CARACTER INCOMPATIVEL");
 			  }
 		}
 		
