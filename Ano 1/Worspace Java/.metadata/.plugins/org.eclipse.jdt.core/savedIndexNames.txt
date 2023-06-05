@@ -3,6 +3,5 @@ INDEX VERSION 1.131+C:\Users\marcel_farias\Desktop\analise_e_desenvolvimento_de_
 3748408733.index
 2805118470.index
 2964045804.index
-1535177651.index
 114030565.index
 618864175.index
