@@ -39,7 +39,7 @@ public class Desafio3 {
 						do {
 							System.out.println("Segundo número não pode ser 0, Informe um outro número ");
 							n2 = sc.nextInt();
-						} while(n2 < 0); 
+						} while(n2 == 0); 
 					}
 					resultado = n1 / n2;
 				break;

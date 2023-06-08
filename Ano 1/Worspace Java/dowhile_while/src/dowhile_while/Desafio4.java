@@ -21,39 +21,45 @@ public class Desafio4 {
 		
 		do {
 			
-			for(int i = 0; i < 5; i++) {
-				System.out.println("Informe seu gênero: masculino - (M) | feminino (f)");
-				String gender = sc.nextLine().toUpperCase();
-				
-				switch(gender) {
-					case "M":
-						contM++;
-						System.out.println("Informe o salário: ");
-						salarioM = sc.nextFloat();
-						
-						System.out.println("Informe a idade: ");
-						idadeM = sc.nextInt();
-						
-					break;
+			System.out.println("Informe seu gênero: masculino - (M) | feminino (f)");
+			String gender = sc.nextLine().toUpperCase();
+			
+			switch(gender) {
+				case "M":
+					contM++;
+					System.out.println("Informe o salário: ");
+					salarioM = sc.nextFloat();
 					
-					case "F":
-						contF++;
-						System.out.println("Informe o salário: ");
-						salarioM = sc.nextFloat();
-						
-						System.out.println("Informe a idade: ");
-						idadeF = sc.nextInt();
-						
-					break;
-				}
+					System.out.println("Informe a idade: ");
+					idadeM = sc.nextInt();
+					
+				break;
 				
+				case "F":
+					contF++;
+					System.out.println("Informe o salário: ");
+					salarioM = sc.nextFloat();
+					
+					System.out.println("Informe a idade: ");
+					idadeF = sc.nextInt();
+					
+				break;
+			}
+				
+			
+			
+			
+			
+			if(contM > 0) {
+				salarioM = salarioM/contM;
+				idadeM = idadeM/contM;
 			}
 			
-			salarioM = salarioM/contM;
-			idadeM = idadeM/contM;
+			if(contF > 0) {
+				salarioF = salarioF/contF;
+				idadeF = idadeF/contF;
+			}
 			
-			salarioF = salarioF/contF;
-			idadeF = idadeF/contF;
 			
 			System.out.println("Média: \nSalário masculino...: "+salarioM+" \nIdade masculino...: "+idadeM+" \nSalário feminino...: "+salarioF+" \nIdade feminino...: "+ idadeF);
 			
@@ -62,6 +68,7 @@ public class Desafio4 {
 			System.out.println("(1 - Finalizar) (2 - Permanecer)");
 			number = sc.nextInt();
 			
+			//arrumar o 4
 		} while(number != 1);
 		
 	}

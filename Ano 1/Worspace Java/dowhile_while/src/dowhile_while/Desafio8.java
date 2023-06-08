@@ -10,7 +10,7 @@ public class Desafio8 {
 		System.out.println("SISTEMA PARA CINEMA (FEEDBACK) ");
 		int cont = 0;
 		
-		int[] contGenero = new int[3];
+		int[] contGenero = new int[4];
 
 		
 		int auxLoop = 0;
@@ -24,8 +24,8 @@ public class Desafio8 {
 			System.out.println("Informe seu nome..:");
 			String nome = sc.nextLine();
 			
-			System.out.println("Informe seu genêro..: (M) - Masculino (F) - Feminino");
-			String genero = sc.nextLine();
+			System.out.println("Informe seu genêro..: (1) - Masculino (2) - Feminino");
+			int genero = sc.nextInt();
 			
 			System.out.println("Informe sua idade..:");
 			int idade = sc.nextInt();
@@ -41,16 +41,21 @@ public class Desafio8 {
 				nomesDez += nome  +"\n";
 			}
 			
-			if(genero == "M") {
+			if(genero == 1) {
 				if(nota < 5) {
+					System.out.println("contGenero[0]++;");
 					contGenero[0]++;
-				} else {
+				} else if(nota > 7) {
+					System.out.println("contGenero[1]++;");
 					contGenero[1]++;
 				}
 			} else {
+				System.out.println("hey");
 				if(nota < 5) {
+					System.out.println("contGenero[2]++;");
 					contGenero[2]++;
-				} else {
+				} else if(nota > 7) {
+					System.out.println("contGenero[3]++;");
 					contGenero[3]++;
 				}
 			}

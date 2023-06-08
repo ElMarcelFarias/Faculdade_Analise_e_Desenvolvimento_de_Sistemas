@@ -17,7 +17,11 @@ public class Desafio6 {
 			System.out.println("Informe sua altura..: ");
 			Float altura = sc.nextFloat();
 			
-			imc = peso/altura*altura;
+			
+			System.out.println("PESO: "+ peso);
+			System.out.println("altura: "+ altura);
+			altura = altura*altura;
+			imc = peso/altura;
 			System.out.println("Este é o seu IMC: "+ imc);
 			
 			
@@ -25,6 +29,7 @@ public class Desafio6 {
 			System.out.println("(1 - Finalizar) (2 - Permanecer)");
 			number = sc.nextInt();
 			
+		
 		} while(number != 1);
 	}
 
