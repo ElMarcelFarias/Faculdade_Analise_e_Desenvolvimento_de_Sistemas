@@ -26,8 +26,7 @@ public class Desafio1 {
 	
 		
 		
-//		System.out.println("Média: " + (soma/cont));
-//		System.out.println("Segundo menor número" + numeric[1]);
+		System.out.println("Média: " + (soma/cont));
     }
 
 }
