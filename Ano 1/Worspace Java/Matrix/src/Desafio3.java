@@ -1,13 +1,13 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Desafio2 {
+public class Desafio3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int [][] matrizNumeros1 = new int[4][4];
-		int [][] matrizNumeros2 = new int [4][4];
+		int [][] matrizNumeros1 = new int[3][2];
+		int [][] matrizNumeros2 = new int [2][3];
 		int cont = 0;
 		String numerosIguais = " /n";
 		
@@ -28,13 +28,9 @@ public class Desafio2 {
 		
 		for(int i = 0; i < 4; i++) {
 			for(int j = 0; j < 4; j++) {	
-				for(int h = 0; h < 4; h++) {
-					for(int y = 0; y < 4; y++) {
-						if(matrizNumeros2[i][j] == matrizNumeros1[h][y]) {
-								numerosIguais = numerosIguais + matrizNumeros2[i][j];
-								cont++;
-						}
-					}
+				if(matrizNumeros2[i][j] == matrizNumeros1[i][j]) {
+					numerosIguais = numerosIguais + matrizNumeros2[i][j];
+					cont++;
 				}
 			}
 		}
