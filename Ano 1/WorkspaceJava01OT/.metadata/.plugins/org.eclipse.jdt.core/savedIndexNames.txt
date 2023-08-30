@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\marcel_farias\Desktop\analise_e_desenvolvimento_de_sitemas\Ano 1\Java\WorkspaceJavaBasico\.metadata\.plugins\org.eclipse.jdt.core
+1535177651.index
+1865797976.index
+3748408733.index
