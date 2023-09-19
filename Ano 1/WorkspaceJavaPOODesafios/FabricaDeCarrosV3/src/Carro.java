@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Carro {
+public class Carro implements IConstrucaoCarro {
 	
 	private String modelo;
 	private String cor ;
@@ -10,7 +10,7 @@ public class Carro {
 		return this.modelo;
 	}
 	
-	public String getCor() {
+	public String getCor() { 
 		return this.cor;
 	}
 	
