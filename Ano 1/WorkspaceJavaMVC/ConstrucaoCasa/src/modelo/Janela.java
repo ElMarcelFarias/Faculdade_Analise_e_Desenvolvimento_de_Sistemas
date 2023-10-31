@@ -1,5 +1,5 @@
 package modelo;
 
-public class Janela {
+public class Janela extends Aberturas {
 
 }

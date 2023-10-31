@@ -17,4 +17,26 @@ public class EntradaSaida {
 		JOptionPane.showMessageDialog(null, "O programa será encerrado!");
 	}
 	
+	public static String solicitarDescricao(String descricao, int ordem) {
+		if(ordem==0) {
+			return JOptionPane.showInputDialog("Informe a descrição da "+ descricao);
+		} else {
+			return JOptionPane.showInputDialog("Informe a descrição da "+ ordem + " " + descricao);
+		}
+	}
+	
+	public static String solicitarCor() {
+		return JOptionPane.showInputDialog("Informe a cor da casa");
+	}
+	
+	public static int solicitarQtdeAberturas(String aberturas) {
+		return Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de "+ aberturas));
+	}
+	
+	public static int solicitarEstado(String tipoAbertura) {
+		String[] opcoes = {"Fechada", "Aberta"};
+		
+		return JOptionPane.showOptionDialog(null, "Informe o estado da " + tipoAbertura, "Estado", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcoes, opcoes[1]);
+	}
+	
 }
