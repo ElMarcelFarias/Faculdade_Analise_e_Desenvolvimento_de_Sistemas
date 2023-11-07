@@ -44,8 +44,19 @@ public class Casa {
 		setCor(cor);
 		setListaDePortas(listaDePortas);
 		setListaDeJanelas(listaDeJanelas);
-		
-		
 	}
+	
+	public Aberturas retornaAbertura(int posicao, String tipoAbertura) {
+		if(tipoAbertura.equals("porta")) {
+			return this.listaDePortas.get(posicao);
+		} else {
+			return this.listaDeJanelas.get(posicao);
+		}
+	}
+	
+	public void moverAbertura(Aberturas aberturas, int novoEstado) {
+		aberturas.setEstado(novoEstado);
+	}
+	
 	
 }
