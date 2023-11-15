@@ -39,6 +39,7 @@ public class Controladora {
 					JOptionPane.showConfirmDialog(null, menuFabricar, "Selecione a opção desejada", JOptionPane.OK_CANCEL_OPTION);
 					
 					if(menuFabricar.getSelectedIndex() == 0) {
+						
 						modelo = EntradaSaida.solicitarModelo();
 						cor    = EntradaSaida.solicitarCor();
 						anoFabricacao = EntradaSaida.solicitarAnoFabricacao();
@@ -60,7 +61,44 @@ public class Controladora {
 			break;
 			
 			case 1: 
-			
+				Fabrica carro = null;
+				String[] opVenda = {"Carro básico", "Carro esportivo"};
+				JComboBox<String> menuVenda = new JComboBox<String>(opVenda);
+				JOptionPane.showConfirmDialog(null, menuVenda, "Selecione a opção desejada para venda", JOptionPane.OK_CANCEL_OPTION);
+				
+				if(menuVenda.getSelectedIndex() == 0) {
+					carro = new Carro();
+					String[] opVendaCarrosBasicos = new String[listaDeCarrosBasicos.size()];
+					
+					
+					for(int i = 0; i < listaDeCarrosBasicos.size(); i++) {
+						String msg = "";
+						msg += listaDeCarrosBasicos.get(i).getModelo() + " - ";
+						msg += listaDeCarrosBasicos.get(i).getAnoFabricacao() + " - ";
+						opVendaCarrosBasicos[i] = msg;
+					}
+					
+					JComboBox<String> menuVendaBasicos = new JComboBox<String>(opVendaCarrosBasicos);
+					JOptionPane.showConfirmDialog(null, menuVendaBasicos, "Selecione a opção desejada para venda", JOptionPane.OK_CANCEL_OPTION);
+					
+					carro.venderCarro(menuVendaBasicos.getSelectedIndex(), "CarroBasico");
+				} else {
+					String[] opVendaCarrosEsportivos = new String[listaDeCarrosEsportivos.size()];
+					carro = new CarroEsportivo();
+					
+					for(int i = 0; i < listaDeCarrosEsportivos.size(); i++) {
+						String msg = "";
+						JOptionPane.showMessageDialog(null, listaDeCarrosEsportivos.size());
+						msg += listaDeCarrosEsportivos.get(i).getModelo() + " - ";
+						msg += listaDeCarrosEsportivos.get(i).getAnoFabricacao() + " - ";
+						opVendaCarrosEsportivos[i] = msg;
+					}
+					
+					JComboBox<String> menuVendaEsportivos= new JComboBox<String>(opVendaCarrosEsportivos);
+					JOptionPane.showConfirmDialog(null, menuVendaEsportivos, "Selecione a opção desejada para venda", JOptionPane.OK_CANCEL_OPTION);
+					carro.venderCarro(menuVendaEsportivos.getSelectedIndex(), "CarroEsportivo");
+				}
+				
 				
 			break;
 			
@@ -108,10 +146,6 @@ public class Controladora {
 			
 		}
 		
-		
-		//String resultado = carro.descricaoCarro();
-		//EntradaSaida.carroCompleto(resultado);
-		
 		JOptionPane.showConfirmDialog(null, menu, "Selecione a opção desejada", JOptionPane.OK_CANCEL_OPTION);
 		} while(menu.getSelectedIndex() != 3);
 	}
@@ -130,16 +164,18 @@ public class Controladora {
 		switch(op) {
 			case "CarroBasico": 
 				carro = new Carro();
-				
-				carro.fabricarCarro(op, data[0], data[1], data[2], "", "");
+			    ArrayList<Fabrica> listaDeCarrosEsportivosNIl = new ArrayList<Fabrica>();
 				listaDeCarrosBasicos.add(carro);
+				carro.fabricarCarro(op, data[0], data[1], data[2], "", "", listaDeCarrosBasicos, listaDeCarrosEsportivosNIl);
+				
 			break;
 			
 			case "CarroEsportivo": 
+				ArrayList<Fabrica> listaDeCarrosBasicosNil = new ArrayList<Fabrica>(); 
 				carro = new CarroEsportivo();
-				
-				carro.fabricarCarro(op, data[0], data[1], data[2], data[3], data[4]);
 				listaDeCarrosEsportivos.add(carro);
+				carro.fabricarCarro(op, data[0], data[1], data[2], data[3], data[4], listaDeCarrosBasicosNil, listaDeCarrosEsportivos);
+				
 			break;
 		
 			default: 
