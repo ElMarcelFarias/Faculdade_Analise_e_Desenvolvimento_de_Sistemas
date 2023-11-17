@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 public abstract class Fabrica implements IConstrucaoCarro {
 	protected String modelo;
 	protected String cor;
@@ -33,6 +35,7 @@ public abstract class Fabrica implements IConstrucaoCarro {
 	}
 	
 	public ArrayList<Fabrica> getlistaDeCarrosEsportivos() {
+		
 		return listaDeCarrosEsportivos;
 	}
 	
@@ -44,14 +47,18 @@ public abstract class Fabrica implements IConstrucaoCarro {
 
 	
 	
-	
-	
-	
-	
 	//set
 	
 	public void setListaDeCarrosBasicos(ArrayList<Fabrica> listaDeCarrosBasicos) {
 		this.listaDeCarrosBasicos = listaDeCarrosBasicos;
+		
+		String msg = "";
+		for(int i = 0; i < listaDeCarrosBasicos.size(); i++) {
+			msg += listaDeCarrosBasicos.get(i).getModelo();
+		}
+		JOptionPane.showMessageDialog(null, msg);
+		
+		
 	}
 	
 	public void setlistaDeCarrosEsportivos(ArrayList<Fabrica> listaDeCarrosEsportivos) { 
@@ -98,6 +105,7 @@ public abstract class Fabrica implements IConstrucaoCarro {
 		if(op.equals("CarroEsportivo")) {
 			listaDeCarrosEsportivos.remove(index);
 		} else {
+			//getlistaDeCarrosBasicos();
 			listaDeCarrosBasicos.remove(index);
 		}
 	}

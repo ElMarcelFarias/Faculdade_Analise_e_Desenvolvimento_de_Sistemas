@@ -29,8 +29,8 @@ public class EntradaSaida {
 		return anoFabricacao;
 	}
 	
-	public static void carroCompleto(String desc) {
-		JOptionPane.showMessageDialog(null, desc);
+	public static void carroCompleto(String msg) {
+		JOptionPane.showMessageDialog(null, msg);
 	}
 	
 	//por ser funções de facil e bastante como de entrada e saida utilizamos o static para colocar em memória ao inicar o sistema.
