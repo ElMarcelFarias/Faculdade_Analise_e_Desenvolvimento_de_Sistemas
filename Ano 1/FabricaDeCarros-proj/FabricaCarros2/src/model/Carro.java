@@ -4,6 +4,7 @@ public class Carro {
 	
 	private String modelo;
 	private String cor;
+	private String anoDeFabricacao;
 	
 	
 	public String getModelo() {
@@ -17,6 +18,12 @@ public class Carro {
 	}
 	public void setCor(String cor) {
 		this.cor = cor;
+	}
+	public String getAnoDeFabricacao() {
+		return anoDeFabricacao;
+	}
+	public void setAnoDeFabricacao(String anoDeFabricacao) {
+		this.anoDeFabricacao = anoDeFabricacao;
 	}
 
 }

@@ -16,16 +16,24 @@ public class Fabrica {
 	
 	public void fabricarCarros (Carro carro){
 		listaDeCarros.add(carro);
-		
 	}
 	
 	public String verCarros() {
 		
-		String msg = "";
+		String msg = "Carros: \n";
+		if(listaDeCarros.size() == 0) {
+			return "Não temos carros disponíveis";
+		}
+		
 		for(int i = 0; i < listaDeCarros.size(); i++) {
 			
-			msg += listaDeCarros.get(i).getModelo() + "\n";
-			msg += listaDeCarros.get(i).getCor() + "\n";
+			if(i > 0) {
+				msg += "-------------------------------------\n";
+			}
+			
+			msg += listaDeCarros.get(i).getModelo().toUpperCase() + " - ";
+			msg += listaDeCarros.get(i).getAnoDeFabricacao().toUpperCase() + " - ";
+			msg += listaDeCarros.get(i).getCor().toUpperCase() + "  \n";
 	
 		}
 	
@@ -34,8 +42,6 @@ public class Fabrica {
 	}
 	
 	public void venderCarros (int carro){
-		
 		listaDeCarros.remove(carro);
-		
 	}
 }

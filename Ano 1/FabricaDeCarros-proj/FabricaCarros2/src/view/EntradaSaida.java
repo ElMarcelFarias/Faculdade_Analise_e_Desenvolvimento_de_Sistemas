@@ -15,6 +15,11 @@ public class EntradaSaida {
 		return cor;
 	}
 	
+	public static String solicitarAnoDeFabricacao() {
+		String cor = JOptionPane.showInputDialog("Informe o ano de fabricação do carro: ");
+		return cor;
+	}
+	
 	public static void carroCompleto(String msg) {
 		JOptionPane.showMessageDialog(null, msg);
 	}
