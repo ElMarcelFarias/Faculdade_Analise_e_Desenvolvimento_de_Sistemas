@@ -1,0 +1,16 @@
+package Model;
+
+import java.util.ArrayList;
+
+public class InfoPedidos {
+	private final ArrayList<Pedidos> pedidos = new ArrayList<>();
+	
+	 public ArrayList<Pedidos> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Pedidos pedidos) {
+        this.pedidos.add(pedidos);
+    }
+	    
+}

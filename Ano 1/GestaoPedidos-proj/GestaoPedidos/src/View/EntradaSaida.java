@@ -1,0 +1,110 @@
+package View;
+
+import java.util.ArrayList;
+import Model.*;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
+public class EntradaSaida {
+	public static int menuInicialPrimario() {
+		String[] opcoes = {"Inicio de expediente - Cadastrar um novo pedido","Sair"};
+		JComboBox<String> menu = new JComboBox<>(opcoes);
+
+		JOptionPane.showMessageDialog(null, menu, "Selecione a opção desejada", JOptionPane.PLAIN_MESSAGE);
+		return menu.getSelectedIndex();
+	}
+	
+	
+	public static int menuInicial() {
+		String[] opcoes = {"Cadastrar um novo pedido","Listar o Pedido pelo Código","Listar todos os Pedidos","Finalizar pedido", "Sair do programa"};
+		JComboBox<String> menu = new JComboBox<>(opcoes);
+
+		JOptionPane.showMessageDialog(null, menu, "Selecione a opção desejada", JOptionPane.PLAIN_MESSAGE);
+		return menu.getSelectedIndex();
+	}
+	
+	public static int solicitarCodigo() {
+		
+		int codigo = 0;
+		
+		do {
+			codigo = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o código do pedido:", "Criar um novo pedido:", JOptionPane.PLAIN_MESSAGE));
+			
+			if(codigo < 0) {
+				JOptionPane.showMessageDialog(null,"Informe um código maior que zero!", "ERROR", JOptionPane.ERROR_MESSAGE);
+			}
+			
+		} while(codigo < 0);
+		
+		return codigo;
+	}
+	
+	public static String solicitarCliente() {
+		return JOptionPane.showInputDialog(null, "Informe o nome do Cliente:", "Criar um novo pedido:", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public static String solicitarDescricao() {
+		return JOptionPane.showInputDialog(null, "Informe o Pedido Solicitado:", "Criar um novo pedido:", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public static int indexSelecionado(ArrayList<Pedidos> pedidos) {
+        String[] pedido = new String[pedidos.size()+1];
+
+        for (int x = 0; x < pedidos.size()+1; x++) {
+            try{
+            	pedido[x] = "Código do pedido " + pedidos.get(x).getCodigo();
+            }
+            catch (IndexOutOfBoundsException e){
+            	pedido[x] = "Voltar";
+            }
+
+        }
+
+        JComboBox menu = new JComboBox<>(pedido);
+        JOptionPane.showMessageDialog(null, menu, "Selecione o pedido desejado pelo código!", JOptionPane.PLAIN_MESSAGE);
+
+        return menu.getSelectedIndex();
+    }
+	
+	
+	public static void listarPedidosPorCodigo(ArrayList<Pedidos> pedidos, int index) {
+		
+		String listagemPedidos = "Código do pedido: "+ pedidos.get(index).getCodigo() + "\nNome do Cliente: "+ pedidos.get(index).getNome() 
+								+ "\nDescrição do pedido: " + pedidos.get(index).getDescricao();
+		
+		JOptionPane.showMessageDialog(null, listagemPedidos, "Listagem de Pedido por Código", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public static void listarTodosPedidos(ArrayList<Pedidos> pedidos) {
+		String listagemPedidos = "";
+		
+		for(int i = 0; i < pedidos.size(); i++) {
+			listagemPedidos += "Código do pedido: "+ pedidos.get(i).getCodigo() + "\nNome do Cliente: "+ pedidos.get(i).getNome() 
+							+ "\nDescrição do pedido: " + pedidos.get(i).getDescricao() +"\n\n";
+		}
+		JOptionPane.showMessageDialog(null, listagemPedidos, "Listagem de todos os Pedidos ", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	
+	public static void mensagemErrorSemPedido() {
+		JOptionPane.showMessageDialog(null,"Você não possui um pedido cadastrado. ", "ERROR", JOptionPane.ERROR_MESSAGE);
+	}
+	
+	
+	public static void mensagemEncerraPrograma() {
+		JOptionPane.showMessageDialog(null,"Tchau! ");
+	}
+	
+	public static void mensagemApagadoSucesso() {
+		JOptionPane.showMessageDialog(null,"Registro apagado com exito! ", "SUCESSO", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	public static void mensagemErrorFinalizacao() {
+		JOptionPane.showMessageDialog(null,"Erro ao apagar pedido ", "ERROR", JOptionPane.ERROR_MESSAGE);
+	}
+	
+	
+	
+	
+	
+}

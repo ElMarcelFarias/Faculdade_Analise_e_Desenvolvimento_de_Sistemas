@@ -1,0 +1,46 @@
+package View;
+
+import java.util.ArrayList;
+import Model.*;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
+public class EntradaSaida {
+	public static int menuInicialPrimario() {
+		String[] opcoes = {"Inicio de expediente - Cadastrar um novo pedido","Sair"};
+		JComboBox<String> menu = new JComboBox<>(opcoes);
+
+		JOptionPane.showMessageDialog(null, menu, "Selecione a opção desejada", JOptionPane.PLAIN_MESSAGE);
+		return menu.getSelectedIndex();
+	}
+	
+	
+	public static int menuInicial() {
+		String[] opcoes = {"Cadastrar um novo pedido","Listar o Pedido pelo Código","Listar todos os Pedidos","Finalizar pedido"};
+		JComboBox<String> menu = new JComboBox<>(opcoes);
+
+		JOptionPane.showMessageDialog(null, menu, "Selecione a opção desejada", JOptionPane.PLAIN_MESSAGE);
+		return menu.getSelectedIndex();
+	}
+	
+	public static String solicitarCodigo() {
+		return JOptionPane.showInputDialog(null, "Informe o código do pedido:", "Criar um novo pedido:", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public static String solicitarCliente() {
+		return JOptionPane.showInputDialog(null, "Informe o nome do Cliente:", "Criar um novo pedido:", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public static String solicitarDescricao() {
+		return JOptionPane.showInputDialog(null, "Informe o Pedido Solicitado:", "Criar um novo pedido:", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	public static String listarPedidosPorCodigo(ArrayList<Pedidos> pedidos) {
+		
+		String pedidos;
+		
+		return " sdadwadw";
+	}
+	
+	
+}

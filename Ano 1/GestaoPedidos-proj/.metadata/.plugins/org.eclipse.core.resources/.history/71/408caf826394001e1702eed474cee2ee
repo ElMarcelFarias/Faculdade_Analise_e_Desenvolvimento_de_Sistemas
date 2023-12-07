@@ -1,0 +1,87 @@
+package Controller;
+import Model.*;
+import View.EntradaSaida;
+
+public class Controladora {
+	
+	InfoPedidos info_pedidos = new InfoPedidos();
+	int opcoesSelecionada = 0;
+	int index = 0;
+	
+	
+	public void exibeMenu() {
+		
+		do {
+		
+			if(info_pedidos.getPedidos().isEmpty()) {
+				opcoesSelecionada = EntradaSaida.menuInicialPrimario();
+			} else {
+				opcoesSelecionada = EntradaSaida.menuInicial();
+			}
+			
+			switch(opcoesSelecionada) {
+				case 0:
+					Pedidos pedido = new Pedidos();
+					
+					
+					pedido.setCodigo(EntradaSaida.solicitarCodigo());
+					pedido.setNome(EntradaSaida.solicitarCliente());
+					pedido.setDescricao(EntradaSaida.solicitarDescricao());
+					
+					info_pedidos.setPedidos(pedido);
+					
+				break;
+				
+				case 1:
+					if(info_pedidos.getPedidos().isEmpty()) {
+						EntradaSaida.mensagemErrorSemPedido();
+					} else {
+						index = EntradaSaida.indexSelecionado(info_pedidos.getPedidos());
+						
+						if(index != info_pedidos.getPedidos().size()) {
+							EntradaSaida.listarPedidosPorCodigo(info_pedidos.getPedidos(), index);
+						}
+						
+					}
+					
+				break;
+				
+				case 2:
+					Movimentacao movimentacaoSaque = new Movimentacao();
+					int aux = 0;
+					
+					index = EntradaSaida.selecionarConta(banco.getNomes());
+					
+					do {
+						saldoAtual = EntradaSaida.coletarSaque();
+						saldo = banco.getContas().get(index).getSaldo();
+						
+						if((saldo + saldoAtual) > -1000) {
+							banco.getContas().get(index).setSaldo(saldoAtual);
+							aux = 1;
+						} else {
+							EntradaSaida.mensagemErrorNegativo((saldo + saldoAtual), saldoAtual);
+						}
+						
+					}while(aux != 1);
+					
+					movimentacaoSaque.setMovimentacao("Saque: R$: "+ saldoAtual + " - " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+					banco.getContas().get(index).setMovimentacoesSaques(movimentacaoSaque.getMovimentacao());
+					banco.getContas().get(index).setMovimentacoesTotais(movimentacaoSaque.getMovimentacao());
+					EntradaSaida.mostraSaldo(banco.getContas().get(index).getSaldo(), banco.getContas().get(index).getNomeConta());
+					
+				break;
+				
+				case 3:
+					EntradaSaida.mensagemEncerraPrograma();
+					System.exit(0);
+				break;
+			}
+			
+			
+		} while(true);
+			
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package View;
+
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
+public class EntradaSaida {
+	public static int menuInicialPrimario() {
+		String[] opcoes = {"Inicio de expediente - Cadastrar um novo pedido","Sair"};
+		JComboBox<String> menu = new JComboBox<>(opcoes);
+
+		JOptionPane.showMessageDialog(null, menu, "Selecione a opção desejada", JOptionPane.PLAIN_MESSAGE);
+		return menu.getSelectedIndex();
+	}
+	
+	
+	public static int menuInicial() {
+		String[] opcoes = {"Cadastrar um novo pedido","Listar o Pedido pelo Código","Listar todos os Pedidos","Finalizar pedido"};
+		JComboBox<String> menu = new JComboBox<>(opcoes);
+
+		JOptionPane.showMessageDialog(null, menu, "Selecione a opção desejada", JOptionPane.PLAIN_MESSAGE);
+		return menu.getSelectedIndex();
+	}
+}

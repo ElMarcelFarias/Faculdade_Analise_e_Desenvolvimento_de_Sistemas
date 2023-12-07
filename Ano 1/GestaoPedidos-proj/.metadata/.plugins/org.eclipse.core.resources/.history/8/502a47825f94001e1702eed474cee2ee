@@ -1,0 +1,7 @@
+package Controller;
+
+public class Controladora {
+	
+	InfoPedidos info_pedidos = new InfoPedidos();
+
+}

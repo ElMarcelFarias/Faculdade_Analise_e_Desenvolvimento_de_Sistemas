@@ -1,0 +1,92 @@
+package Controller;
+import Model.*;
+import View.EntradaSaida;
+
+public class Controladora {
+	
+	InfoPedidos info_pedidos = new InfoPedidos();
+	int opcoesSelecionada = 0;
+	
+	
+	public void exibeMenu() {
+		
+		do {
+		
+			if(info_pedidos.getPedidos().isEmpty()) {
+				opcoesSelecionada = EntradaSaida.menuInicialPrimario();
+			} else {
+				opcoesSelecionada = EntradaSaida.menuInicial();
+			}
+			
+			switch(opcoesSelecionada) {
+				case 0:
+					Pedidos pedido = new Pedidos();
+					
+					
+					pedido.setCodigo(EntradaSaida.solicitarCodigo());
+					pedido.setCodigo(EntradaSaida.solicitarCliente());
+					pedido.setCodigo(EntradaSaida.solicitarDescricao());
+					
+					
+					banco.setContas(conta);
+					
+				break;
+				
+				case 1:
+					if(banco.getContas().isEmpty()) {
+						System.exit(0);
+					}
+					
+					Movimentacao movimentacaoDeposito = new Movimentacao();
+					index = EntradaSaida.selecionarConta(banco.getNomes());
+					
+					saldoAtual = EntradaSaida.coletaDeposito();
+					banco.getContas().get(index).setSaldo(saldoAtual);
+					
+					movimentacaoDeposito.setMovimentacao("Depósito: R$: "+ saldoAtual + " - " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+					banco.getContas().get(index).setMovimentacoesDeposito(movimentacaoDeposito.getMovimentacao());
+					banco.getContas().get(index).setMovimentacoesTotais(movimentacaoDeposito.getMovimentacao());
+					
+					EntradaSaida.mostraSaldo(banco.getContas().get(index).getSaldo(), banco.getContas().get(index).getNomeConta());
+					
+				break;
+				
+				case 2:
+					Movimentacao movimentacaoSaque = new Movimentacao();
+					int aux = 0;
+					
+					index = EntradaSaida.selecionarConta(banco.getNomes());
+					
+					do {
+						saldoAtual = EntradaSaida.coletarSaque();
+						saldo = banco.getContas().get(index).getSaldo();
+						
+						if((saldo + saldoAtual) > -1000) {
+							banco.getContas().get(index).setSaldo(saldoAtual);
+							aux = 1;
+						} else {
+							EntradaSaida.mensagemErrorNegativo((saldo + saldoAtual), saldoAtual);
+						}
+						
+					}while(aux != 1);
+					
+					movimentacaoSaque.setMovimentacao("Saque: R$: "+ saldoAtual + " - " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+					banco.getContas().get(index).setMovimentacoesSaques(movimentacaoSaque.getMovimentacao());
+					banco.getContas().get(index).setMovimentacoesTotais(movimentacaoSaque.getMovimentacao());
+					EntradaSaida.mostraSaldo(banco.getContas().get(index).getSaldo(), banco.getContas().get(index).getNomeConta());
+					
+				break;
+				
+				case 3:
+					EntradaSaida.mensagemEncerraPrograma();
+					System.exit(0);
+				break;
+			}
+			
+			
+		} while(true);
+			
+		
+	}
+
+}
