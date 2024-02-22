@@ -57,9 +57,55 @@ section {
     margin-top: 0px;
 }
 
+.geladeira {
+    height: 250px;
+    width: 125px;
+}
+
+.direita {
+    float: right;
+}
+
+.esquerda {
+    float: left;
+}
+
+section #titulos {
+    float: left;
+    height: 250px;
+    width: 650px;
+    margin: 0px auto;
+}
+
+
+section #topo {
+    width: 900px;
+    margin: 0px auto;
+    height: 250px;
+}
+
 footer {
     background-color: #005f89;
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+section p {
+    clear: both;
+    text-align: center;
+    margin: 10px 80px;
 }
