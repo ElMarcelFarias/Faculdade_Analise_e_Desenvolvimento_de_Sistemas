@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site Para o fã-club do George R. R. Martin">
+    <meta name="keywords" content="Game of Thrones, GOT, George R. R. Martin">
+    <meta name="author" content="Escola Sistêmica">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fã club - George R. R. Martin</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <img src="../images/got.jpg" alt="Logo da Game of Thrones">
+        <h1>Game of Thrones - George R. R. Martin</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html"><div class="opcao">Inicio</div></a>
+        <a href="conteudo.html" ><div class="opcao">Conteúdo</div></a>
+        <a href="inscricao.html"><div class="opcao">Inscrição</div></a>
+    </nav>
+
+    <section>
+        <h2>Inscrições para o Fã Club!</h2>
+        <p>Preencha este formulário para fazer parte desta familia!</p>
+        <form action="#" method="post" name="fmrinscricoes"> <!--Utilizar metodo post-->
+            <fieldset class="inscricoes">
+
+                <fieldset>
+                    <legend>Dados pessoais:</legend>
+
+                    <label for="Inscricao_Nome">Nome: </label>
+                    <input type="text" name="Inscricao_Nome" id="nome">
+
+                    <fieldset>
+                        <legend>Sexo:</legend>
+                      
+                        <div style="display: flex;">
+                            <label for="Inscricao_Masculino">Masculino</label>
+                          <input type="radio" id="Inscricao_Masculino" name="drone" value="M" checked />
+                        </div>
+                      
+                        <div style="display: flex;">
+                            <label for="Inscricao_Feminino">Femininio</label>
+                          <input type="radio" id="Inscricao_Feminino" name="drone" value="F" />
+                        </div>
+                      
+                    </fieldset>
+                      
+
+                    <label for="email">Data de Nascimento: </label>
+                    <input type="date" name="Inscricao_DataNascimento" id="Inscricao_DataNascimento">
+
+                    <label for="Inscricao_Email">E-mail: </label>
+                    <input type="text" name="Inscricao_Email" id="Inscricao_Email">
+
+                    <label for="Inscricao_Telefone">Telefone: </label>
+                    <input type="text" name="Inscricao_Telefone" id="Inscricao_Telefone">
+
+                    <fieldset style="margin-bottom: 10px;">
+                        <legend>Deseja participar?</legend>
+                      
+                        <div style="display: flex;">
+                          <label for="Inscricao_Sim">Sim</label>
+                          <input type="checkbox" id="Inscricao_Sim" name="Inscricao_Sim" checked />
+                        </div>
+                    </fieldset>
+                    <button type="submit">Enviar</button><button type="reset">Limpar</button>
+                </fieldset>
+
+
+            </fieldset>
+
+
+        </form>
+    </section>
+    <footer>Copyright &copy; Escola Sistêmica 2024</footer>
+
+</body>
+</html>
