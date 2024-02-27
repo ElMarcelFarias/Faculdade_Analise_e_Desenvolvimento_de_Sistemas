@@ -1,9 +1,14 @@
 function validaInscricoes() {
-    if(document.fmrinscricoes.Inscricao_Nome.value == ""){
-        alert('Preencha o campo Nome.')
+
+    let nome = document.fmrinscricoes.Inscricao_Nome.value;
+    const expRegNome = new RegExp("^[A-zÀ-ü]{3,}([ ]{1}[A-zÀ-ü]{2,})+$");
+
+    if (!expRegNome.test(nome)) {
+        alert("Preencha o campo Nome corretamente");
         document.fmrinscricoes.Inscricao_Nome .focus();
         return false;
     }
+
 
     if((document.fmrinscricoes.Inscricao_DataNascimento.value == "")){
         alert('Preencha o campo data de nascimento corretamente.')
@@ -11,11 +16,15 @@ function validaInscricoes() {
         return false;
     }
 
-    if((document.fmrinscricoes.Inscricao_Email.value == "")){
-        alert('Preencha o campo e-mail corretamente.')
+    let email = document.fmrinscricoes.Inscricao_Email.value;
+    const expRegEmail = new RegExp("([a-z]+).(@[a-z]+.).");
+
+    if (expRegEmail.test(email)) {
+        alert("Preencha o campo email");
         document.fmrinscricoes.Inscricao_Email.focus();
         return false;
     }
+
 
     if((document.fmrinscricoes.Inscricao_Telefone.value == "")){
         alert('Preencha o campo telefone corretamente.')
