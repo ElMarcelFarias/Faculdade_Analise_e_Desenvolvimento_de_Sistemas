@@ -41,6 +41,18 @@ app.post("/novogame", (req, res) => {
 
 });
 
+//edicao de um jogo 
+
+app.put('/novogame/:index', (req, res) => {
+    const { index } = req.params;
+    let title = req.body.title;
+    let studio = req.body.studio;
+    let price = req.body.price;
+
+    games[index] = { title: title, studio: studio, price: price};
+    return res.json(games);
+})
+
 
 
 
