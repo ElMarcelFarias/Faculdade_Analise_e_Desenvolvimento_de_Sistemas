@@ -1,42 +1,56 @@
 import express from 'express';
 
 const app = express();
+app.use(express.json());
+
+
+let cars = [
+    {nome: "Saveiro Cross", marca: "Volks", preco: 72000},
+    {nome: "Civic G6", marca: "Honda", preco: 44000},
+    {nome: "Edge", marca: "Ford", preco: 70000},
+    {nome: "Mobi", marca: "Fiat", preco: 47000},
+    {nome: "Toro", marca: "Fiat", preco: 89000},
+    {nome: "C180", marca: "Mercedez-bens", preco: 140000}
+]
 
 app.get('/', (req, res) => 
-    res.send("<h3>Rotas no Express</h3><p>Rota '/'")
+    res.send("<h3>Atividade</h3><p>Rota '/'")
 );
 
 app.listen(3000, () => 
     console.log('Servidor iniciado na porta 3000')
 );
 
-app.get('/sobre/:nome', (req, res) => 
-    res.send("Bem vindo: "+req.params.nome)
-);
-
 //buscando o valor de um array 
-var carros = ['fiest', 'saveiro'];
-app.use(express.urlencoded({ extended: true }));
+//app.use(express.urlencoded({ extended: true }));
 
-app.get('/cars/:id', (req, res) => {
-    let id = req.params.id;
-    res.json([carros[id]]);
+app.get('/cars', (req, res) => {
+    res.json(cars)
 })
 
-app.post('/cars/', (req, res) => {
-    let name = req.body.name;
-    carros[(carros.length)] = name;
-    return res.json([carros[(carros.length - 1)]]); 
+app.post('/newcar', (req, res) => {
+    let nome = req.body.nome;
+    let marca = req.body.marca;
+    let preco = req.body.preco;
+
+    let newCar = { nome: nome, marca: marca, preco: preco };
+    cars.push(newCar);
+    res.send("OK");
+
 });
 
-app.put('/cars/update/:id', (req, res) => {
-    let name = req.body.name;
-    carros[req.params.id] = name;
-    return res.json(carros[req.params.id]);
+app.put('/cars/update/:index', (req, res) => {
+    const { index } = req.params;
+    let nome = req.body.nome;
+    let marca = req.body.marca;
+    let preco = req.body.preco;
+
+    cars[index] = { nome: nome, marca: marca, preco: preco};
+    return res.json(cars);
 })
 
-app.delete('/cars/delete/:id', (res, req) => {
-    let id = req.params.id;
-    carros[id] = null;
-    return res.json(carros[id]);
+app.delete('/delete/:index', (req, res) => {
+    const { index } = req.params;
+    cars.splice(index, 1);
+    return res.json({message: "O carro foi deletado com sucesso!"});
 })
