@@ -35,6 +35,8 @@ app.get('/deletar/:id', (req, res) => {
             return val;
         }
     })
+    res.redirect('/');
     res.render('index', {tasksList: tasks})
+    
 })
 
