@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+	</section>
+	<section name="WorkbenchPreferenceDialog">
+		<item key="DIALOG_X_ORIGIN" value="411"/>
+		<item key="DIALOG_Y_ORIGIN" value="46"/>
+		<item key="DIALOG_WIDTH" value="619"/>
+		<item key="DIALOG_HEIGHT" value="540"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="-108"/>
+		<item key="DIALOG_Y_ORIGIN" value="-104"/>
+		<item key="DIALOG_WIDTH" value="762"/>
+		<item key="DIALOG_HEIGHT" value="639"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>
