@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-    $("header").load("/Faculdade_Analise_e_Desenvolvimento_de_Sistemas/Ano2/FrontEnd/WorkspaceTrilhaWebJquery/pages/site/general/cabecalho.html");
-    $("nav").load("/Faculdade_Analise_e_Desenvolvimento_de_Sistemas/Ano2/FrontEnd/WorkspaceTrilhaWebJquery/pages/site/general/menu.html");
-    $("footer").load("/Faculdade_Analise_e_Desenvolvimento_de_Sistemas/Ano2/FrontEnd/WorkspaceTrilhaWebJquery/pages/site/general/rodape.html");
+    $("header").load("/pages/site/general/cabecalho.html");
+    $("nav").load("/pages/site/general/menu.html");
+    $("footer").load("/pages/site/general/rodape.html");
 })
 
 function validaFaleConosco() {
