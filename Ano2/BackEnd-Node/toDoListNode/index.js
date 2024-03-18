@@ -14,7 +14,7 @@ app.use( express.urlencoded({
 }));
 
 
-let tasks = ['Passear com o dog', 'Ir ao mercado', 'Comprar manteiga'];
+let tasks = ['Marce', 'Uchoa'];
 
 app.get('/', (req, res) => {
     res.render('index',{tasksList: tasks});
