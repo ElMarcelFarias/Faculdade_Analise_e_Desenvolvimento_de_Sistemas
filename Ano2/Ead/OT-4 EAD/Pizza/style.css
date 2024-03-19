@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.imagem {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    background-image: url(imgs/pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */    
+}
+
+.imagem h1 {
+    font-size: 200px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #333 8px 5px;
+}
+
+.cardapio {
+    background-color: #DDDDDD;
+    height: 300px;
+}
+
+.cardapio h2 {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.cardapio li {
+    padding: 20px;
+    margin-left: 200px;
+    list-style: none;
+}
+
+button {
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: right;
+    float: right;
+    margin-right: 200px;
+    display: flex;
+}
+
+footer {
+    background-color: #AAAAAA;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+}
