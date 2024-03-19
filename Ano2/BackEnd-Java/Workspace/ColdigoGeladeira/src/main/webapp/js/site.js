@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-    $("header").load("/pages/site/general/cabecalho.html");
-    $("nav").load("/pages/site/general/menu.html");
-    $("footer").load("/pages/site/general/rodape.html");
+    $("header").load("http://localhost:8080/ColdigoGeladeira/pages/site/general/cabecalho.html");
+    $("nav").load("http://localhost:8080/ColdigoGeladeira/pages/site/general/menu.html");
+    $("footer").load("http://localhost:8080/ColdigoGeladeira/pages/site/general/rodape.html");
 })
 
 function validaFaleConosco() {

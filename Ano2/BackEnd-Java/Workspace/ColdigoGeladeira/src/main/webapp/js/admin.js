@@ -1,4 +1,4 @@
 $(document).ready(function() {
-    $("header").load("/pages/admin/general/header.html");
-    $("footer").load("/pages/admin/general/footer.html");
+    $("header").load("http://localhost:8080/ColdigoGeladeira/pages/admin/general/header.html");
+    $("footer").load("http://localhost:8080/ColdigoGeladeira/pages/admin/general/footer.html");
 })
