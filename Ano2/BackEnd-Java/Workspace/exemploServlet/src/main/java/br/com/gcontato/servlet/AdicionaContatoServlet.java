@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AdicionaContatoServlet extends HttpServlet {
 	
-	private static final long serialVersionUID = 1l;
+	private static final long serialVersionUID = 1l; //grava o estado da classe
 	
 	public AdicionaContatoServlet() {
 		super();
