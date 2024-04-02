@@ -35,6 +35,24 @@ public class JDBCMarcaDAO implements MarcaDAO {
 			//Execução da instrução criada previamente e armazenamento do resultado do objeto rs
 			ResultSet rs = stmt.executeQuery(comando);
 			
+			while(rs.next()) {
+				
+				//Criação de instância da classe
+				marca = new Marca();
+				
+				//Recebimento dos 2 dados retornados do BD para cada linha encontrada
+				int id = rs.getInt("id");
+				String nome = rs.getString("nome");
+				
+				//Setando no objeto marca os valores encontrados
+				marca.setId(id);
+				marca.setNome(nome);
+				
+				//Adição da instância contida no objeto Marca na lista de marcas
+				listMarcas.add(marca);
+				
+			}
+			
 			
 				
 		}catch (Exception ex){

@@ -23,12 +23,19 @@ public class MarcaRest {
 	public Response buscar() {
 		
 		List<Marca> listaMarcas = new ArrayList<Marca>();
-		
 		Conexao conec = new Conexao();
 		Connection conexao = conec.abrirConexao();
 		JDBCMarcaDAO jdbcMarca = new JDBCMarcaDAO(conexao);
 		listaMarcas = jdbcMarca.buscar();
 		
+		
+		String comando = "SELECT * FROM marcas";
+		
+		
+		
+		
+		
+		conec.fecharConexao();
 	}
 	
 }
