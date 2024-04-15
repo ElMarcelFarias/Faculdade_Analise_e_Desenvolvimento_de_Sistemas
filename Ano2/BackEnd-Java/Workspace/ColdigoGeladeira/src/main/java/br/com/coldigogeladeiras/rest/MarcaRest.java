@@ -29,12 +29,6 @@ public class MarcaRest {
 		listaMarcas = jdbcMarca.buscar();
 		
 		
-		String comando = "SELECT * FROM marcas";
-		
-		
-		
-		
-		
 		conec.fecharConexao();
 	}
 	
