@@ -25,8 +25,52 @@ public class UtilRest {
 			 * objeto result convertido para JSON).
 			 * 
 			 */
+			String valorResposta = new Gson().toJson(result);
+			return Response.ok(valorResposta).build();
+		}catch(Exception ex){
+			ex.printStackTrace();
+			return this.buildResponse(ex.getMessage());
 		}
 		
+		
 	}
+	
+	/*
+	 * Abaixo o método responsável por enviar a resposta ao cliente sobre
+	 * A transação, inclusão, consulta, edição ou exclusão, clientes, não realizadas com sucesso
+	 * ou seja, que contenha algum erro.
+	 * Repare que o método em questão aguarda que seja repassado um
+	 * conteúdo que será referenciado pelo por um objeto chamado rb.
+	 * 
+	 * */
+	
+	public Response buildErrorResponse(String str) {
+		/*
+		 * Abaixo o objeto rb recebe o status do erro.
+		 * 
+		 * */
+		
+		ResponseBuilder rb = Response.status(Response.Status.INTERNAL_SERVER_ERROR);
+		
+		/*
+		 *Define o tipo de retorno desta entidade(objeto), no
+		 *caso é definido como texto simples.
+		 **/
+		
+		rb = rb.type("text/plain");
+		
+		/*
+		 * Retorna o objeto da empresa com status 500 (erro),
+		 * junto com a String contendo a mensagem de erro.
+		 * */
+		
+		return rb.build();
+	}
+	
+	
+	
+	
+	
+	
 	
 }	
