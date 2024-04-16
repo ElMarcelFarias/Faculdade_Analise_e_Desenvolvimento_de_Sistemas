@@ -11,6 +11,23 @@ $(document).ready(function() {
 				
 				if(marcas!="") {
 					
+					$("#selMarca").html("");
+					var option = document.createElement("option");
+					option.setAttribute("value", "");
+					option.innerHTML = ("Escolha");
+					$("#selMarca").append(option);
+					
+					for(var i = 0; i < marcas.length; i++) {
+						
+						var option = document.createElement("option");
+						//alert(marcas[i].id);
+						alert(marcas[i].nome);
+						option.setAttribute("value", marcas[i].id);
+						option.innerHTML = (marcas[i].nome);
+						$("#selMarca").append(option);
+						
+					}
+					
 				} else {
 					$("selMarca").html("");
 					
