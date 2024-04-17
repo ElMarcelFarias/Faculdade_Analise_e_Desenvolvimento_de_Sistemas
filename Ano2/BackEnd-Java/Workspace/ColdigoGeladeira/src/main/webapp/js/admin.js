@@ -1,6 +1,10 @@
 COLDIGO = new Object(); // Cria um objeto COLDIGO, que será usado como identificador do projeto
 
 $(document).ready(function() {
+	
+	//Cria uma constante com o valor da URL RAIZ do resto
+	COLDIGO.PATH = "/ColdigoGeladeira/rest/";
+	
     $("header").load("http://localhost:8080/ColdigoGeladeira/pages/admin/general/header.html");
     $("footer").load("http://localhost:8080/ColdigoGeladeira/pages/admin/general/footer.html");
     
