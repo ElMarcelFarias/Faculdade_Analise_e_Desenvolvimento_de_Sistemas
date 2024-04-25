@@ -2,12 +2,10 @@ COLDIGO.produto = new Object();
 
 $(document).ready(function() {
 	COLDIGO.produto.carregarMarcas = function() {
-		alert("Tentando buscar marcas");
 		$.ajax({
 			type: "GET",
 			url: COLDIGO.PATH + "marca/buscar",
 			success: function (marcas) {
-				alert(JSON.stringify(marcas));
 				
 				if(marcas!="") {
 					
@@ -21,7 +19,6 @@ $(document).ready(function() {
 						
 						var option = document.createElement("option");
 						//alert(marcas[i].id);
-						alert(marcas[i].nome);
 						option.setAttribute("value", marcas[i].id);
 						option.innerHTML = (marcas[i].nome);
 						$("#selMarca").append(option);
@@ -93,7 +90,6 @@ $(document).ready(function() {
 	COLDIGO.produto.buscar = function() {
 		
 		var valorBusca = $("#campoBuscaProduto").val();
-		alert(valorBusca);
 		
 		$.ajax({
 			type: "GET",
@@ -135,7 +131,7 @@ $(document).ready(function() {
 						"<td>"+listaDeProdutos[i].capacidade+"</td>" +
 						"<td>"+COLDIGO.formatarDinheiro(listaDeProdutos[i].valor)+"</td>" +  
 						"<td>"+
-							"<a><img src='../../imgs/edit.png' alt='Editar'></a>"+
+							"<a onclick=\"COLDIGO.produto.exibirEdicao('"+listaDeProdutos[i].id+"')\"><img src='../../imgs/edit.png' alt='Editar'></a>"+
 							"<a onclick=\"COLDIGO.produto.excluir('"+listaDeProdutos[i].id+"')\"><img src='../../imgs/delete.png' alt='Excluir'></a>"+
 						"</td>"+
 						"</tr>";
@@ -176,7 +172,20 @@ $(document).ready(function() {
 	
 	
 	
-	
+	COLDIGO.produto.exibirEdicao = function(id) {
+		$.ajax({
+			type: "GET",
+			url: COLDIGO.PATH + "produto/buscarPorId",
+			data: "id="+id,
+			success: function (produto) {
+					
+				console.log(produto);
+			},
+			error: function (error) {
+				COLDIGO.exibirAviso("Erro ao buscar produtos para edição: "+ error.status + " - "+ error.statusText);
+			}
+		}); 
+	}
 	
 	
 	

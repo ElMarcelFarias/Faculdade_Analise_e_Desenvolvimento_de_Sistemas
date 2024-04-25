@@ -121,6 +121,40 @@ public List<JsonObject> buscarPorNome(String nome){
 		return true;
 		
 	}
+	
+	public Produto buscarPorId(int id) {
+		String comando = "SELECT * FROM produtos WHERE produtos.id = ?";
+		Produto produto = new Produto();
+		
+		System.out.println(comando + " id=> "+id);
+		
+		try {
+			PreparedStatement p = this.conexao.prepareStatement(comando);
+			p.setInt(1, id);
+			ResultSet rs = p.executeQuery();
+			while(rs.next()) {
+				
+				String categoria = rs.getString("categoria");
+				String modelo = rs.getString("modelo");
+				int capacidade = rs.getInt("capacidade");
+				float valor = rs.getFloat("valor");
+				int marcaId = rs.getInt("marcaId");
+				
+				produto.setId(id);
+				produto.setCategoria(categoria);
+				produto.setMarcaId(marcaId);
+				produto.setModelo(modelo);
+				produto.setCapacidade(capacidade);
+				produto.setValor(valor);
+				
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return produto;
+		
+	}
 
 
 

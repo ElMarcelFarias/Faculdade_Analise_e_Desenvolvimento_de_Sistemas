@@ -114,4 +114,34 @@ public class ProdutoRest extends UtilRest{
 	}
 	
 	
+	@GET
+	@Path("/buscarPorId")
+	@Consumes("application/*")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response buscaPorId(@QueryParam("id") int id) {
+		
+		System.out.println("ENTROU AQUI REST");
+		
+		try {
+			
+			Produto produto = new Produto();
+			Conexao conec = new Conexao();
+			Connection conexao = conec.abrirConexao();
+			JDBCProdutoDAO jdbcProduto = new JDBCProdutoDAO(conexao);
+			
+			produto = jdbcProduto.buscarPorId(id);
+			
+			conec.fecharConexao();
+			
+			return this.buildResponse(produto);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			return this.buildErrorResponse(e.getMessage());
+		}
+		
+		
+	}
+	
+	
 }

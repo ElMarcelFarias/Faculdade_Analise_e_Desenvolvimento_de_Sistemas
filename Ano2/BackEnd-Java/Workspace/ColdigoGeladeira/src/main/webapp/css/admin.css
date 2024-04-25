@@ -226,8 +226,9 @@ section h2, section h3 {
 }
 
 
-
-
+#modalAviso, .modalEditar{
+	display: none;
+}
 
 
 
