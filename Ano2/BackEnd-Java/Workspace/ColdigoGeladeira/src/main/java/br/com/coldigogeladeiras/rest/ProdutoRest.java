@@ -110,7 +110,7 @@ public class ProdutoRest extends UtilRest{
 			e.printStackTrace();
 			return this.buildErrorResponse(e.getMessage());
 		}
-		
+		//fim função de deletar;
 	}
 	
 	
