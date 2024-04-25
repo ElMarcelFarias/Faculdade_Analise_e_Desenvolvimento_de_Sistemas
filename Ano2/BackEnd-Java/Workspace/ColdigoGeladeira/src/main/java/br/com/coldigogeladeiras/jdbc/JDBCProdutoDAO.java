@@ -54,23 +54,17 @@ public class JDBCProdutoDAO implements ProdutoDAO {
 		return true;
 	}
 	
-	public List<JsonObject> buscarPorNome(String nome) {
+public List<JsonObject> buscarPorNome(String nome){
 		
-		//Inicia criação do comando SQL de busca
-		String comando = "SELECT produtos.*, marcas.nome as marca FROM produtos "
-						+" INNER JOIN marcas ON produtos.marcas_id = marcas.id ";
-		//Se o nome não estiver vazio
+		String comando = "SELECT produtos.*, marcas.nome AS marca FROM produtos INNER JOIN marcas ON produtos.marcas_id = marcas.id ";
+		
 		if(!nome.equals("")) {
-			//concatena no comando where buscando o nome do produto
-			//o texto da variável nome
-			
-			comando += " WHERE modelo LIKE '%" + nome + "%' ";
-			
+			comando += " WHERE modelo LIKE '%" + nome + "%'"; 
 		}
-		//Finaliza o comando ordenando alfabeticamente por
-		//categoria, marca e depois modelo.
 		
 		comando += " ORDER BY categoria ASC, marcas.nome ASC, modelo ASC";
+		
+		System.out.println(comando);
 		
 		List<JsonObject> listaProdutos = new ArrayList<JsonObject>();
 		JsonObject produto = null;
@@ -89,7 +83,7 @@ public class JDBCProdutoDAO implements ProdutoDAO {
 				
 				if(categoria.equals("1")) {
 					categoria = "Geladeira";
-				}else if(categoria.equals("2")) {
+				}else if(categoria.equals("2")){
 					categoria = "Freezer";
 				}
 				
@@ -100,25 +94,44 @@ public class JDBCProdutoDAO implements ProdutoDAO {
 				produto.addProperty("capacidade", capacidade);
 				produto.addProperty("valor", valor);
 				produto.addProperty("marcaNome", marcaNome);
+				
 				listaProdutos.add(produto);
-				
-				
-				
 			}
-			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
 		return listaProdutos;
+	}
+
+
+	public boolean deletar(int id) {
+		String comando = "DELETE FROM produtos WHERE id = ?";
+		PreparedStatement p;
 		
-		
-		
-		
-		
-		
-		
+		try {
+			p = this.conexao.prepareStatement(comando);
+			p.setInt(1, id);
+			p.execute();
+			
+		}catch(SQLException e){
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 		
 	}
+
+
+
+
+
+
+
+
+
+
+
+
 	
 }
