@@ -125,20 +125,22 @@ public List<JsonObject> buscarPorNome(String nome){
 	public Produto buscarPorId(int id) {
 		String comando = "SELECT * FROM produtos WHERE produtos.id = ?";
 		Produto produto = new Produto();
-		
-		System.out.println(comando + " id=> "+id);
+	
 		
 		try {
 			PreparedStatement p = this.conexao.prepareStatement(comando);
 			p.setInt(1, id);
 			ResultSet rs = p.executeQuery();
+			
 			while(rs.next()) {
+				//System.out.println(comando + " id=> entrou aqui"+id);
 				
 				String categoria = rs.getString("categoria");
+				
 				String modelo = rs.getString("modelo");
 				int capacidade = rs.getInt("capacidade");
 				float valor = rs.getFloat("valor");
-				int marcaId = rs.getInt("marcaId");
+				int marcaId = rs.getInt("marcas_id");
 				
 				produto.setId(id);
 				produto.setCategoria(categoria);

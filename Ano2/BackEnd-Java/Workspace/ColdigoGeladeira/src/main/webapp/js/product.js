@@ -2,37 +2,49 @@ COLDIGO.produto = new Object();
 
 $(document).ready(function() {
 	COLDIGO.produto.carregarMarcas = function() {
+		
+		if(id!=undefined) {
+			select = "#selMarcaEdicao";
+		} else {
+			select = "#selMarca";
+		}
+		
 		$.ajax({
 			type: "GET",
 			url: COLDIGO.PATH + "marca/buscar",
 			success: function (marcas) {
 				
 				if(marcas!="") {
-					
+					$(select).html("");
 					$("#selMarca").html("");
 					var option = document.createElement("option");
 					option.setAttribute("value", "");
 					option.innerHTML = ("Escolha");
-					$("#selMarca").append(option);
+					$(select).append(option);
 					
 					for(var i = 0; i < marcas.length; i++) {
 						
 						var option = document.createElement("option");
 						//alert(marcas[i].id);
 						option.setAttribute("value", marcas[i].id);
+						
+						if((id!=undefined)&&(id==marcas[i].id)) {
+							option.setAttribute("selected", "selected");
+						}
+						
 						option.innerHTML = (marcas[i].nome);
-						$("#selMarca").append(option);
+						$(select).append(option);
 						
 					}
 					
 				} else {
-					$("selMarca").html("");
+					$(select).html("");
 					
 					var option = document.createElement("option");
 					option.setAttribute("value", "");
 					option.innerHTML = ("Cadastre uma marca primeiro!");
-					$("#selMarca").append(option);
-					$("#selMarca").addClass("aviso");
+					$(select).append(option);
+					$(select).addClass("aviso");
 				}
 				
 				
@@ -41,12 +53,12 @@ $(document).ready(function() {
 			error: function (error) {
 				COLDIGO.exibirAviso("Error ao buscar as marcas: "+ error.status + " - "+ error.statusText);
 				
-				$("#selMarca").html("");
+				$(select).html("");
 				var option = document.createElement("option");
 				option.setAttribute("value", "");
 				option.innerHTML = ("Erro ao carregar Marcas!");
-				$("#selMarca").append(option);
-				$("#selMarca").addClass("aviso");
+				$(select).append(option);
+				$(select).addClass("aviso");
 			}
 		}) 
 	}
@@ -179,7 +191,45 @@ $(document).ready(function() {
 			data: "id="+id,
 			success: function (produto) {
 					
-				console.log(produto);
+				document.frmEditaProduto.idProduto.value = produto.id;
+				document.frmEditaProduto.modelo.value = produto.modelo;
+				document.frmEditaProduto.capacidade.value = produto.capacidade;
+				document.frmEditaProduto.valor.value = produto.valor;
+				
+				var selCategoria = document.getElementById('selCategoriaEdicao');
+				for(var i=0; i < selCategoria.length; i++){
+					if(selCategoria.options[i].value == produto.categoria) {
+						selCategoria.options[i].setAttribute("selected", "selected");
+					} else {
+						selCategoria.options[i].removeAttribute("selected");
+					}
+				}
+				
+				console.log(JSON.stringify(produto));
+				
+				COLDIGO.produto.carregarMarcas(produto.marcaId)
+				
+				var modalEditarProduto = {
+					title: "Editar produto",
+					height: 400,
+					width: 550,
+					modal: true,
+					buttons: {
+						"Salvar": function() {
+							
+						}, 
+						"Cancelar": function() {
+							$(this).dialog("close");
+						}
+					},
+					close: function() {
+						
+					}
+				};
+				
+				$("#modalEditaProduto").dialog(modalEditarProduto);
+				
+				
 			},
 			error: function (error) {
 				COLDIGO.exibirAviso("Erro ao buscar produtos para edição: "+ error.status + " - "+ error.statusText);
