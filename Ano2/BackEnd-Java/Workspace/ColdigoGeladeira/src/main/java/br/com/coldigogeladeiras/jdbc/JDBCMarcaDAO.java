@@ -131,21 +131,57 @@ public class JDBCMarcaDAO implements MarcaDAO {
 	}
 	
 	
-	public boolean deletar(int id) { //STAND BY
-		String comando = "DELETE FROM marcas WHERE id = ?";
-		PreparedStatement p;
-		
-		try {
-			p = this.conexao.prepareStatement(comando);
-			p.setInt(1, id);
-			p.execute();
-			
-		}catch(SQLException e){
-			e.printStackTrace();
-			return false;
-		}
-		return true;
-		
+//	public boolean deletar(int id) { //STAND BY
+//		
+//		
+//		String verifyDeleteMarca = "SELECT * FROM produtos WHERE marcas_id = ?";
+//		
+//		
+//		
+//		
+//		String comando = "DELETE FROM marcas WHERE id = ?";
+//		PreparedStatement p;
+//		
+//		try {
+//			p = this.conexao.prepareStatement(comando);
+//			p.setInt(1, id);
+//			p.execute();
+//			
+//		}catch(SQLException e){
+//			e.printStackTrace();
+//			return false;
+//		}
+//		return true;
+//		
+//	}
+	
+	
+	public boolean deletar(int id) {
+	    String verifyDeleteMarca = "SELECT COUNT(*) FROM produtos WHERE marcas_id = ?";
+	    String comando = "DELETE FROM marcas WHERE id = ?";
+	    PreparedStatement p;
+	    
+	    try {
+	       
+	        p = this.conexao.prepareStatement(verifyDeleteMarca);
+	        p.setInt(1, id);
+	        ResultSet resultSet = p.executeQuery();
+	        if (resultSet.next()) {
+	            int count = resultSet.getInt(1);
+	            if (count > 0) {
+	                System.out.println("Existem produtos associados a esta marca. Não é possível deletar.");
+	                return false;
+	            }
+	        }
+	        
+	        p = this.conexao.prepareStatement(comando);
+	        p.setInt(1, id);
+	        p.executeUpdate();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	    return true;
 	}
 	
 	

@@ -35,13 +35,15 @@ $(document).ready(function() {
 		
 		var valorBusca = $("#campoBuscaMarca").val();
 		
+		
 		$.ajax({
 			type: "GET",
 			url: COLDIGO.PATH + "marca/buscar",
 			data:"valorBusca="+valorBusca,
 			success: function (dados) {
-				
-				dados = JSON.parse(dados);
+				//dados = JSON.parse(dados);
+				//alert('Marcel');
+				//alert(JSON.stringify(dados));
 				
 				$("#listaMarcas").html(COLDIGO.marca.exibir(dados));
 				
@@ -57,7 +59,8 @@ $(document).ready(function() {
 	COLDIGO.marca.exibir = function(listaDeMarcas) {
 		var tabela = "<table>"+
 		"<tr>"+
-		"<th>Nome</th>"
+		"<th>Nome</th>"+
+		"<th></th>"+
 		"<th class='acoes''>Ações</th>"+
 		"</tr>";
 		
@@ -66,6 +69,7 @@ $(document).ready(function() {
 			for(var i = 0; i<listaDeMarcas.length; i++){
 				tabela += "<tr>" +
 						"<td>"+listaDeMarcas[i].nome+"</td>" +  
+						"<td></td>" +
 						"<td>"+
 							"<a onclick=\"COLDIGO.marca.exibirEdicao('"+listaDeMarcas[i].id+"')\"><img src='../../imgs/edit.png' alt='Editar'></a>"+
 							"<a onclick=\"COLDIGO.marca.excluir('"+listaDeMarcas[i].id+"')\"><img src='../../imgs/delete.png' alt='Excluir'></a>"+
