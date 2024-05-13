@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de Loja Virtual com Produtos - Marcel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Filtros e ordenação -->
+    <div class="filtros">
+        <label for="ordenacao">Ordenar por:</label>
+        <select name="ordenacao" id="ordenacao" class="filtro">
+            <option value="preco-asc">Preço: Menor para Maior</option>
+            <option value="preco-desc">Preço: Maior para Menor</option>
+            <!-- Adicione outras opções de ordenação, se necessário -->
+        </select>
+        <label for="filtro-categoria" class="filtro">Filtrar por Categoria:</label>
+        <select name="filtro-categoria" id="filtro-categoria" class="filtro">
+            <option value="todos">Todos</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="roupas">Roupas</option>
+            <option value="livros">Livros</option>
+            <!-- Adicione outras categorias, se necessário -->
+        </select>
+    </div>
+
+    <!-- Produtos -->
+    <div class="container" id="produtos">
+        <!-- Produtos serão carregados aqui -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

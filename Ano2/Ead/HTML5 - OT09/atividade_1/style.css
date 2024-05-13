@@ -1,0 +1,22 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #915050;
+    padding: 20px;
+}
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptável ao tamanho da tela */
+    grid-gap: 20px;
+}
+.fotos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.fotos img:hover {
+    transform: scale(1.05);
+}
