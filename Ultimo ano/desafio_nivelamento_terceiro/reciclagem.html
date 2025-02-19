@@ -42,22 +42,27 @@
 
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
-            
-            <div>
-                <a class="logo" href="#">
-                    <p class="logodm mb-5" style="height: 30px; width: 250px;"> <span class="element text-primary">Sustentabilidade e Consciência Ambiental</span></p>
+            <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand logo m-0 d-flex align-items-center" href="#">
+                    <p class="logodm m-0">
+                        <span class="element text-primary">Sustentabilidade e Consciência</span>
+                    </p>
                 </a>
-            </div>             
     
-            <div id="navigation">
-                <ul class="navigation-menu nav-light navlogo">
-                    <li class="active"><a href="index.html" class="scroll" style="color: #3c4858 !important;">Home</a></li>
-                    <li><a href="reciclagem.html" style="color: #3c4858 !important;"><span class="element text-primary">Reciclagem</span></a></li>
-                    <li><a href="desmatamento.html" style="color: #3c4858 !important;">Desmatamento</a></li>
-                    <li><a href="contato.html" style="color: #3c4858 !important;">Contato</a></li>
-                </ul>
-                
-            </div>
+                <button class="navbar-toggler" id="btnNav" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <ul class="navbar-nav navigation-menu nav-light navlogo">
+                        <li class="nav-item active"><a href="index.html" class="nav-link scroll" style="color: #3c4858 !important;">Home</a></li>
+                        <li class="nav-item"><a href="reciclagem.html" class="nav-link" style="color: #3c4858 !important;"><span class="element text-primary">Reciclagem</span></a></li>
+                        <li class="nav-item"><a href="desmatamento.html" class="nav-link" style="color: #3c4858 !important;">Desmatamento</a></li>
+                        <li class="nav-item contact-nav"><a href="contato.html" class="nav-link" style="color: #3c4858 !important;">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -120,20 +125,31 @@
         </div>
     </section>
     
-    <footer class="footer footer-bar">
-        <div class="container text-center">
+    <footer class="footer footer-bar bg-dark py-3">
+        <div class="container text-center text-sm-start">
             <div class="row align-items-center">
-                <div class="col-sm-10">
-                    <div class="text-sm-center text-white">
-                        <p class="mb-0">© 2025 Desenvolvimento por  <a href="https://www.linkedin.com/in/marcel-leite-de-farias-38b62b220/" target="_blank" class="text-white">Marcel Leite de Farias </a><i class="mdi mdi-heart text-danger"></i></p>
-                    </div>
+                <!-- Texto do footer -->
+                <div class="col-12 col-sm-10 mb-3 mb-sm-0">
+                    <p class="mb-0 text-white">
+                        © 2025 Desenvolvimento por 
+                        <a href="https://www.linkedin.com/in/marcel-leite-de-farias-38b62b220/" target="_blank" class="text-reset">Marcel Leite de Farias</a> 
+                        <i class="mdi mdi-heart text-danger"></i>
+                    </p>
                 </div>
-
-                <div class="col-sm-2 mt-4 mt-sm-0 pt-2 pt-sm-0 text-end">
-                    <ul class="list-unstyled social-icon social mb-0 mt-4">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/SOSMataAtlantica/?locale=pt_BR" class="rounded" target="_blank"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.instagram.com/sosmataatlantica/"  class="rounded" target="_blank"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
-                        <!--<li class="list-inline-item"><a href="https://www.linkedin.com/company/sts-regulariza%C3%A7%C3%A3o-ambiental-e-imobili%C3%A1ria/" class="rounded" target="_blank" ><i data-feather="linkedin" class="fea icon-sm fea-social"></i></a></li>-->
+    
+                <!-- Ícones sociais -->
+                <div class="col-12 col-sm-2 text-center text-sm-end">
+                    <ul class="list-unstyled social-icon social mb-0 d-flex justify-content-center justify-content-sm-end gap-2"> 
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/SOSMataAtlantica/?locale=pt_BR" class="rounded" target="_blank">
+                                <i data-feather="facebook" class="fea icon-sm fea-social text-white"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/sosmataatlantica/" class="rounded" target="_blank">
+                                <i data-feather="instagram" class="fea icon-sm fea-social text-white"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -164,70 +180,17 @@
             duration: 1000
         });
 
-        //envio de email, validação via AJAX com Jquery
-        //$('.phone_with_ddd').mask('(00) 00000-0000');
-
         $(document).ready(function(){
-            var SPMaskBehavior = function (val) {
-                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-            },
-            spOptions = {
-                onKeyPress: function(val, e, field, options) {
-                    field.mask(SPMaskBehavior.apply({}, arguments), options);
-                }
-            };
-
-            $('#telefone').mask(SPMaskBehavior, spOptions);
-        });
-
-        $(document).ready(function(){
-        $("#contact-form").submit(function(e){
-                e.preventDefault();
-
-                var nome = $("#nome").val();
-                var telefone = $("#telefone").val();
-                var email = $("#email").val();
-                var assunto = $("#assunto").val();
-                var mensagem = $("#mensagem").val();
-
-                
-                if((nome == '') || (telefone == '') || (email == '') || (mensagem == '') || (assunto == '')) {
-                    Swal.fire(
-                        'Erro',
-                        'Por favor, preencha os campos corretamente!',
-                        'error'
-                        )
-                } else {
-                    $.ajax({
-                        url: 'email.php',
-                        type: 'POST',
-                        data: $(this).serialize(),
-                        cache: false,
-                        success:function(data){
-                        Swal.fire({
-                            title: 'Email enviado com sucesso!',
-                            text: 'Sua mensagem foi enviadam para STS Ambiental!',
-                            icon: 'success'
-                        }).then(()=>{
-                            window.location.reload();
-                        })
-                        
-                        }
-                    })
-                    
-                }
-            })
-        })
-
-        $("#nav-logo").on("click", function(){
-
-            var logo = document.getElementById("logo");
-
-            if (logo.style.display == "none") {
-                logo.style.display = 'block';
-            } else {
-                logo.style.display = 'none';
-            }  
+            $("#btnNav").on("click", function(event){
+                $("#navigation").css('position', 'relative'); 
+                $("#navigation").toggle("fast", function() {
+                    if ($(this).is(":visible")) {
+                        $(".contact-nav").addClass('contact');
+                    } else {
+                        $(".contact-nav").removeClass('contact'); 
+                    }
+                });
+            });
         });
 
        

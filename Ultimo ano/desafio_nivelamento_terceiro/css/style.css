@@ -2336,9 +2336,8 @@ p {
 .logo {
   font-weight: 700;
   font-size: 24px;
-  padding: 0 0 6px;
   letter-spacing: 1px;
-  line-height: 68px;
+  line-height: 1.2;
 }
 
 @media (min-width: 992px) {
@@ -4394,8 +4393,13 @@ p {
   }
 }
 
+.contact {
+  margin-bottom: 50px !important;
+}
+
+
 .footer {
-  background: #2e7d32;
+  background: #2e7d32 !important;
   height: 100px;
   padding: 60px 0;
   position: relative;
@@ -4496,9 +4500,8 @@ p {
   background-color: #33673B;
 }
 .logodm {
-  height: 80px;
-  padding-top: 10px;
-  margin: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .sobrenos {
@@ -4507,7 +4510,7 @@ p {
 
 
 .navlogo {
-  padding-top: 20px!important;
+  padding-top: 0 !important;
 }
 
 .bg-transparent {
