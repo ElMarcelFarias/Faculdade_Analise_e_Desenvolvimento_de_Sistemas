@@ -1,11 +1,8 @@
 function verifyCredentials() {
-
-    // Obtém os valores dos inputs
     const username = document.getElementById('nomeUsuario').value.trim();
     const password = document.getElementById('senha').value.trim();
     const confirmPassword = document.getElementById('confirmarSenha').value.trim();
 
-    // Verifica se todos os campos foram preenchidos
     if (!username || !password || !confirmPassword) {
         Swal.fire({
             title: 'Erro',
@@ -15,7 +12,6 @@ function verifyCredentials() {
         return;
     }
 
-    // Valida se as senhas coincidem
     if (password !== confirmPassword) {
         Swal.fire({
             title: 'Erro',
@@ -25,7 +21,6 @@ function verifyCredentials() {
         return;
     }
 
-    // Verifica se o usuário já existe no localStorage
     let users = JSON.parse(localStorage.getItem('users')) || [];
 
     const userExists = users.some(user => user.username === username);
@@ -38,11 +33,14 @@ function verifyCredentials() {
         });
         return;
     }
+    
+    let newId = 1;
+    if (users.length > 0) {
+        newId = Math.max(...users.map(user => user.id || 0)) + 1;
+    }
 
-    // Adiciona o novo usuário ao array
-    users.push({ username, password });
+    users.push({ id: newId, username, password, is_logged: 0 });
 
-    // Salva o array atualizado no localStorage
     localStorage.setItem('users', JSON.stringify(users));
 
     Swal.fire({

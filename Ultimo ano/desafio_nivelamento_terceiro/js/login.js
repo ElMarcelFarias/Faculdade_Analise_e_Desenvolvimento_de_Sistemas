@@ -1,5 +1,4 @@
 function verifyCredentials() {
-    
     const username = document.getElementById('nomeUsuario').value.trim();
     const password = document.getElementById('senha').value.trim();
 
@@ -31,6 +30,14 @@ function verifyCredentials() {
     const userFound = users.find(user => user.username === username && user.password === password);
 
     if (userFound) {
+        // Utiliza o ID para encontrar o registro e atualiza is_logged para 1
+        const index = users.findIndex(user => user.id === userFound.id);
+        if (index !== -1) {
+            users[index].is_logged = 1;
+        }
+
+        localStorage.setItem('users', JSON.stringify(users));
+
         Swal.fire({
             title: 'Login realizado com sucesso!',
             html: '<small><b>Redirecionando...</b></small>',
