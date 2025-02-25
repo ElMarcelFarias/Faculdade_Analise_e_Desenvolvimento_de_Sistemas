@@ -1,3 +1,16 @@
+(function() {
+    var users = JSON.parse(localStorage.getItem('users')) || [];
+    var loggedUser = users.find(function(user) {
+        return user.is_logged === 1;
+    });
+   
+    if (loggedUser) {
+        window.location.href = '../index.html';
+        return;
+    }
+
+})();
+
 function verifyCredentials() {
     const username = document.getElementById('nomeUsuario').value.trim();
     const password = document.getElementById('senha').value.trim();

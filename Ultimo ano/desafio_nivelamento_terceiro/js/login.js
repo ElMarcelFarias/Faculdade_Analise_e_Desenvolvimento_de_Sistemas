@@ -1,3 +1,16 @@
+(function() {
+    var users = JSON.parse(localStorage.getItem('users')) || [];
+    var loggedUser = users.find(function(user) {
+        return user.is_logged === 1;
+    });
+   
+    if (loggedUser) {
+        window.location.href = '../index.html';
+        return;
+    }
+
+})();
+
 function verifyCredentials() {
     const username = document.getElementById('nomeUsuario').value.trim();
     const password = document.getElementById('senha').value.trim();
@@ -30,8 +43,12 @@ function verifyCredentials() {
     const userFound = users.find(user => user.username === username && user.password === password);
 
     if (userFound) {
-        // Utiliza o ID para encontrar o registro e atualiza is_logged para 1
+
         const index = users.findIndex(user => user.id === userFound.id);
+
+        if (users[index].is_logged == 1) {
+            window.location.href = '../index.html';
+        }
         if (index !== -1) {
             users[index].is_logged = 1;
         }

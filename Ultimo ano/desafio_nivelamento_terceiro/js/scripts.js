@@ -35,7 +35,7 @@ document.write('<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></scr
     if (!loggedUser) {
         var loginPath = window.location.pathname.includes('/pages/') ? 'login.html' : 'pages/login.html';
         window.location.href = loginPath;
-    }
+    } 
 })();
 
 
