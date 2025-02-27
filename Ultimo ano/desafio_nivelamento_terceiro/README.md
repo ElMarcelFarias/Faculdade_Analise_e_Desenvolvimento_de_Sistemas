@@ -16,16 +16,16 @@ Este projeto é um site voltado para a divulgação de práticas sustentáveis e
 
 ## Estrutura do Projeto
 
-    ```bash
-        ├── css/
-        ├── fonts/
-        ├── images/
-        ├── includes/
-        ├── js/
-        ├── pages/
-        ├── index.html
-        └── readme.md
-    ```
+    
+    ├── css/
+    ├── fonts/
+    ├── images/
+    ├── includes/
+    ├── js/
+    ├── pages/
+    ├── index.html
+    └── readme.md
+    
  
 
 
