@@ -25,6 +25,8 @@ document.write('<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></scr
     if (window.location.pathname.indexOf('login.html') !== -1 || 
         window.location.pathname.indexOf('registrar.html') !== -1) {
         return;
+    } else {
+        startInactivityMonitor();
     }
     
     var users = JSON.parse(localStorage.getItem('users')) || [];
@@ -37,6 +39,24 @@ document.write('<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></scr
         window.location.href = loginPath;
     } 
 })();
+
+function startInactivityMonitor() {
+    let inactivityTimeout;
+
+    function resetInactivityTimer() {
+        clearTimeout(inactivityTimeout);
+        inactivityTimeout = setTimeout(() => {
+            logout();
+        }, 300000); // 10 segundos
+    }
+
+    document.addEventListener('mousemove', resetInactivityTimer);
+    document.addEventListener('keypress', resetInactivityTimer);
+    document.addEventListener('scroll', resetInactivityTimer);
+    document.addEventListener('click', resetInactivityTimer);
+
+    resetInactivityTimer();
+}
 
 
 function logout() {
