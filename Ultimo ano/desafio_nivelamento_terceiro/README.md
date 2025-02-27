@@ -32,5 +32,5 @@ Este projeto é um site voltado para a divulgação de práticas sustentáveis e
 ## Instalação e Execução
 
 1. **Clone o repositório** (ou baixe os arquivos):
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+ ```bash
+ git clone https://github.com/seu-usuario/nome-do-repositorio.git
