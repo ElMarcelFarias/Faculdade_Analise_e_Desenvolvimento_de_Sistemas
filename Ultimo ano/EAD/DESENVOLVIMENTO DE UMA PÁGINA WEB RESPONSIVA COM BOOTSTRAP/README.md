@@ -1,28 +1,19 @@
-# Sustentabilidade e Consciência Ambiental
+# Desenvolvimento de uma página web responsiva com bootstrap
 
-Este projeto é um site voltado para a divulgação de práticas sustentáveis e a conscientização ambiental. O objetivo é informar os usuários sobre a importância da sustentabilidade e dos cuidados com o meio ambiente, apresentando conteúdos sobre reciclagem, desmatamento e outras ações que promovem um futuro mais verde.
+Projeto desenvolvido como parte da atividade EaD, com o objetivo de aprofundar o conhecimento prático na utilização do framework Bootstrap para o desenvolvimento de páginas web responsivas e eficientes.
 
 ## Tecnologias Utilizadas
 
 - **HTML5** e **CSS3** – Estrutura e estilização das páginas.
 - **Bootstrap** – Framework responsivo utilizado para facilitar o design e a adaptação em diferentes tamanhos de tela.
 - **JavaScript** – Para interações, animações e manipulação de elementos dinâmicos.
-- **Plugins e Bibliotecas Adicionais:**
-  - [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/) para exibição de popups e galerias.
-  - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) para criação de sliders.
-  - [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) para animações durante o scroll.
-  - [Feather Icons](https://feathericons.com/) para ícones leves e personalizáveis.
-  - [VLibras](https://vlibras.gov.br/) para acessibilidade, permitindo a tradução da página para a Libras.
 
 ## Estrutura do Projeto
 
     
     ├── css/
-    ├── fonts/
-    ├── images/
-    ├── includes/
+    ├── img/
     ├── js/
-    ├── pages/
     ├── index.html
     └── readme.md
     
