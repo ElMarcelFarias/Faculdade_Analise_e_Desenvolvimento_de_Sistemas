@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Notes Style
+
+-------------------------------------------------------------------*/
+
+.note{
+	position: relative;
+
+	.note-controls{
+		position: absolute;
+		bottom: 0.75rem;
+    	left: 1.25rem;
+    	right: 1.25rem;
+		opacity: 0;
+	}
+
+	&:hover{
+		.note-controls{
+			opacity: 1;
+		}
+	}
+}

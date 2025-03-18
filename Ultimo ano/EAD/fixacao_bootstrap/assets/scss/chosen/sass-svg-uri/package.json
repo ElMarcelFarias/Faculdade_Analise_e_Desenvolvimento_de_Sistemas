@@ -1,0 +1,56 @@
+{
+  "_args": [
+    [
+      "sass-svg-uri@1.0.0",
+      "/Users/akshaykumar/Downloads/bootstrap4c-chosen-master"
+    ]
+  ],
+  "_development": true,
+  "_from": "sass-svg-uri@1.0.0",
+  "_id": "sass-svg-uri@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-AemS5OPOjR7E6sTIKAwPLvRca+g=",
+  "_location": "/sass-svg-uri",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "sass-svg-uri@1.0.0",
+    "name": "sass-svg-uri",
+    "escapedName": "sass-svg-uri",
+    "rawSpec": "1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "1.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/sass-svg-uri/-/sass-svg-uri-1.0.0.tgz",
+  "_spec": "1.0.0",
+  "_where": "/Users/akshaykumar/Downloads/bootstrap4c-chosen-master",
+  "author": {
+    "name": "Waldemar Figueroa"
+  },
+  "bugs": {
+    "url": "https://github.com/waldemarfm/sass-svg-uri/issues"
+  },
+  "description": "Sass function to encode SVG as a data uri without it being in base64",
+  "homepage": "https://github.com/waldemarfm/sass-svg-uri#readme",
+  "keywords": [
+    "sass",
+    "scss",
+    "svg",
+    "uri"
+  ],
+  "license": "ISC",
+  "main": "_svg-uri.scss",
+  "name": "sass-svg-uri",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waldemarfm/sass-svg-uri.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

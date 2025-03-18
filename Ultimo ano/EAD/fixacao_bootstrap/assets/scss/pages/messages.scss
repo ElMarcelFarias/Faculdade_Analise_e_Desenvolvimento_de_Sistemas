@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Importing Variables
+2. Messgaes Style
+
+-------------------------------------------------------------------*/
+
+
+
+@import "../basestyle/variables";
+@import "../bootstrap/bootstrap";
+
+.messgaes{
+    margin: 0px;
+    padding: 0px;
+
+    .user-thumb{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+    }
+
+    li{
+        + li{
+            margin-top: 2rem;
+        }
+    }
+
+    .media-body{
+        flex: unset;
+    }
+
+    .messgae-bubble{
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        position: relative;
+        max-width: 70%;
+
+        &:before{
+            content:"";
+            display: inline-block;
+            border:14px solid transparent;
+            border-top-color: lighten(theme-color("warning"), 25%);
+            border-right-color: lighten(theme-color("warning"), 25%);
+            position: absolute;
+            top: 0px;
+            right: calc( 100% - 6px );
+        }
+
+        &.from-you{
+            &:before{
+                left:calc( 100% - 6px );
+                right: auto;
+                border-right-color:transparent;
+                border-top-color: #f8f9fa;
+                border-left-color:#f8f9fa;
+            }
+        }
+
+    }
+}
+
+

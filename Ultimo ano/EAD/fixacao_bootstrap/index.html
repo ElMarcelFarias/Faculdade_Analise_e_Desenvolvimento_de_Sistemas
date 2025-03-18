@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Akshay Kumar">
+
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="assets/css/basestyle/style.css">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>EaD - UniSenai</title>
+
+
+  </head>
+  <body>
+
+      <section class="wrapper">
+          <aside class="sidebar">
+            <nav class="navbar navbar-dark bg-danger">
+              <a class="navbar-brand m-0 py-2 brand-title" href="#">EaD - Bootstrap</a>
+              <span></span>
+              <a class="navbar-brand py-2 material-icons toggle-sidebar" href="#">menu</a>
+            </nav>
+
+            <nav class="navigation" >
+              <ul>
+                  <li class=""><a href="index.html" title="Formulário"><span class="nav-icon material-icons">event_note</span> Formulário</a></li>
+                  <li><a href="index.html" title="Theme Settings"><span class="nav-icon material-icons ">account_circle</span> Contato </a>
+                  <li><a href="index.html" title="Theme Settings"><span class="nav-icon material-icons ">person</span> Perfil </a>
+                  <li><a href="index.html" title="Theme Settings"><span class="nav-icon material-icons ">build</span> Configurações </a></li>
+                  <li><a href="index.html" title="Theme Settings"><span class="nav-icon material-icons ">logout</span> Sair </a>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="content-area">
+
+            <header class="header sticky-top">
+              <nav class="navbar navbar-light bg-white px-sm-4 d-flex align-items-center justify-content-between">
+                  <!-- Botão Menu Sidebar -->
+                <a class="navbar-brand py-2 d-md-none m-0 material-icons toggle-sidebar" href="#">menu</a>
+
+                <!-- Título Centralizado -->
+                <h4 class="m-0 font-weight-bold mx-auto">Cadastro de Usuário</h4>
+              </nav>
+            </header>
+
+            <div class="content-wrapper">
+
+                <div class="row page-tilte align-items-center">
+                  <div class="col-md-auto">
+                    <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
+                    <h1 class="weight-300 h3 title">Formulário</h1>
+                  </div>
+                  <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
+                    <div class="controls d-flex justify-content-center justify-content-md-end"></div>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <div class="row">
+                    <div class="col-lg-12 mb-4 mb-lg-0">
+
+                      <!-- 3.1 Informações Pessoais -->
+                      <div class="card mb-4">
+                        <div class="card-header">Informações Pessoais</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>Nome Completo</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Data de Nascimento</label>
+                                <input type="date" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Sexo</label>
+                                <select class="form-control" required>
+                                  <option>Masculino</option>
+                                  <option>Feminino</option>
+                                  <option>Outro</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-3 mb-3">
+                                <label>CPF</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>RG</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Estado Civil</label>
+                                <select class="form-control" required>
+                                  <option>Solteiro(a)</option>
+                                  <option>Casado(a)</option>
+                                  <option>Divorciado(a)</option>
+                                </select>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Foto de Perfil</label>
+                                <input type="file" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>Assinatura Digital</label>
+                                <input type="file" class="form-control">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- 3.2 Contato -->
+                      <div class="card mb-4">
+                        <div class="card-header">Contato</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>E-mail</label>
+                                <input type="email" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Telefone</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Celular</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label>Endereço</label>
+                              <textarea class="form-control" rows="2" required></textarea>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>CEP</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label>País</label>
+                                <select class="form-control" required>
+                                  <option>Brasil</option>
+                                  <option>Outro</option>
+                                </select>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- 3.3 Credenciais de Acesso -->
+                      <div class="card mb-4">
+                        <div class="card-header">Credenciais de Acesso</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>Nome de Usuário</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Senha</label>
+                                <input type="password" class="form-control" required>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Confirmação de Senha</label>
+                                <input type="password" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>Pergunta Secreta</label>
+                                <select class="form-control" required>
+                                  <option>Qual o nome do seu primeiro animal de estimação?</option>
+                                  <option>Qual o nome da sua mãe?</option>
+                                  <option>Qual sua comida favorita?</option>
+                                </select>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label>Resposta Secreta</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                              <input type="checkbox" class="custom-control-input" id="termsCheck" required>
+                              <label class="custom-control-label" for="termsCheck">Aceito os termos de uso</label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- 3.4 Informações Profissionais -->
+                      <div class="card mb-4">
+                        <div class="card-header">Informações Profissionais</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                              <div class="col-md-4 mb-3">
+                                <label>Ocupação</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Empresa</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>CNPJ da Empresa</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-4 mb-3">
+                                <label>Cargo</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Salário Aproximado</label>
+                                <input type="number" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Data de Admissão</label>
+                                <input type="date" class="form-control" required>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- 3.5 Preferências e Redes Sociais -->
+                      <div class="card mb-4">
+                        <div class="card-header">Preferências e Redes Sociais</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label>Gênero Musical Favorito</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label>Hobbies</label><br>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" value="Futebol"> Futebol
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" value="Leitura"> Leitura
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" value="Viagens"> Viagens
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" value="Música"> Música
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-4 mb-3">
+                                <label>Facebook</label>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Instagram</label>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>LinkedIn</label>
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                            <label>Notificações via E-mail:</label><br>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="notificacao" value="Sim"> Sim
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="notificacao" value="Não"> Não
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- 3.6 Pagamento e Dados Bancários -->
+                      <div class="card mb-4">
+                        <div class="card-header">Pagamento e Dados Bancários</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                              <div class="col-md-4 mb-3">
+                                <label>Número do Cartão de Crédito</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Data de Vencimento</label>
+                                <input type="month" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>CVV</label>
+                                <input type="number" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-4 mb-3">
+                                <label>Banco</label>
+                                <select class="form-control" required>
+                                  <option>Banco do Brasil</option>
+                                  <option>Caixa</option>
+                                  <option>Bradesco</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Agência</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                <label>Conta Corrente</label>
+                                <input type="text" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-4 mb-3">
+                                <label>Tipo de Conta</label>
+                                <select class="form-control" required>
+                                  <option>Poupança</option>
+                                  <option>Corrente</option>
+                                </select>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <div class="card mb-4">
+                        <div class="card-header">Outros Recursos</div>
+                        <div class="card-body">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group">
+                              <label>Upload de Documento PDF</label>
+                              <input type="file" class="form-control" accept="application/pdf" required>
+                              <div class="invalid-feedback">Por favor, envie um arquivo PDF válido.</div>
+                            </div>
+
+                            <div class="form-group">
+                              <label>Controle deslizante para aceitar termos</label>
+                              <input type="range" class="form-control" min="0" max="100" value="0" id="termsSlider" required>
+                              <div class="invalid-feedback">Você precisa aceitar os termos.</div>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="contactTime">Horário de Preferência para Contato</label>
+                              <input type="time" class="form-control" id="contactTime" required>
+                              <div class="invalid-feedback">Escolha um horário de contato.</div>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="dependents">Número de Dependentes</label>
+                              <input type="number" class="form-control" id="dependents" min="0" required>
+                              <div class="invalid-feedback">Por favor, insira o número de dependentes.</div>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="favoriteColor">Cor Favorita</label>
+                              <input type="color" class="form-control" id="favoriteColor" required>
+                              <div class="invalid-feedback">Escolha sua cor favorita.</div>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="comments">Comentários ou Observações</label>
+                              <textarea class="form-control" id="comments" rows="3" required></textarea>
+                              <div class="invalid-feedback">Por favor, insira seus comentários.</div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <footer class="footer">
+                  <p class="text-muted m-0"><small class="float-right">Feito por Marcel Farias </small><small >UniSenai © 2025</small></p>
+                </footer>
+            </div>
+          </div>
+      </section>
+
+      <script src="assets/js/lib/moment.min.js"></script>
+      <script src="assets/js/lib/jquery.min.js"></script>
+      <script src="assets/js/lib/popper.min.js"></script>
+      <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+      <script src="assets/js/chosen-js/chosen.jquery.js"></script>
+
+
+      <script src="assets/js/custom.js"></script>
+
+      <script src="assets/js/inputmask/inputmask/inputmask.js"></script>
+      <script src="assets/js/inputmask/inputmask/inputmask.extensions.js"></script>
+      <script src="assets/js/inputmask/inputmask/inputmask.numeric.extensions.js"></script>
+      <script src="assets/js/inputmask/inputmask/inputmask.date.extensions.js"></script>
+      <script src="assets/js/inputmask/inputmask/inputmask.phone.extensions.js"></script>
+      <script src="assets/js/inputmask/inputmask/jquery.inputmask.js"></script>
+      <script src="assets/js/inputmask/inputmask/phone-codes/phone.js"></script>
+      <script src="assets/js/inputmask/inputmask/phone-codes/phone-be.js"></script>
+      <script src="assets/js/inputmask/inputmask/phone-codes/phone-ru.js"></script>
+
+      <script src="assets/js/pages/form-validation.js"></script>
+
+  </body>
+</html>

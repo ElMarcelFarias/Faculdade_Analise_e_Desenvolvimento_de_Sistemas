@@ -1,0 +1,214 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Importing Variables
+2. Timeline Style
+	2.1 Responsive Timeline 
+
+-------------------------------------------------------------------*/
+
+
+@import "../basestyle/variables";
+@import "../bootstrap/bootstrap";
+
+.timeline{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+
+	&:before{
+		width:2px;
+		height: 100%;
+		content: "";
+		display: block;
+		background-color: #ccc;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto; 
+	}
+	
+	li{
+		position: relative;
+		list-style: none;
+		display: flex;
+		margin-bottom: 24px;
+
+		time{
+			white-space: nowrap;
+			margin: 26px 68px;
+		}
+
+		> div{
+			max-width: 47%;
+			min-width: 47%;
+
+			&.card{
+				&:before, &:after{
+					position:absolute;
+					top: 30px;
+					left: 100%;
+					content: "";
+					border:10px solid transparent; 
+					display: inline-block;
+					height: 10px;
+					width: 10px;
+				}
+
+				&:before{	
+					border-left-color: #ccc;
+					border-width: 11px;
+    				top: 29px;
+				}
+				&:after{
+					border-left-color: #fff;
+					z-index: 1;
+				}
+
+			}
+
+		}
+
+
+		&:nth-child(even){
+			flex-direction: row-reverse;
+			time{
+				text-align: right;
+			}
+
+			> div{
+				&.card{
+					&:before, &:after{
+						left:auto;
+						right: 100%;
+					}
+					&:before{
+						border-left-color: transparent;
+						border-right-color: #ccc;
+					}
+					&:after{
+						border-left-color: transparent;
+						border-right-color: #fff;
+					}
+				}
+			}
+		}
+
+
+		&:before{
+			width:20px;
+			height: 20px;
+			content: "";
+			display: block;
+			background-color: #fff;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 32px;
+			margin: auto;
+			border-radius: 100px;
+			border:6px solid #fff; 
+		}
+
+
+		&:nth-child(5n+1){
+			&:before{
+				border-color: theme-color("primary") ;
+			}
+			time{
+				color: theme-color("primary");
+			}
+		}
+		&:nth-child(5n+2){
+			&:before{
+				border-color: theme-color("danger");
+			}
+			time{
+				color: theme-color("danger");
+			}
+		}
+		&:nth-child(5n+3){
+			&:before{
+				border-color: theme-color("success") ;
+			}
+			time{
+				color: theme-color("success");
+			}
+		}
+		&:nth-child(5n+4){
+			&:before{
+				border-color: theme-color("info") ;
+			}
+			time{
+				color: theme-color("info");
+			}
+		}
+		&:nth-child(5n+5){
+			&:before{
+				border-color: theme-color("warning") ;
+			}
+			time{
+				color: theme-color("warning");
+			}
+		}
+		
+
+	}
+
+
+
+	@media only screen and (max-width:  map-get($grid-breakpoints, "md") ) {
+
+		&:before{
+			left: 29px;
+			right: unset;
+		}
+
+
+		li{
+			flex-direction: column-reverse;
+
+			time{
+				margin: 0px 0px 12px 62px;
+			}
+
+			&:nth-child(even){
+				flex-direction: column-reverse;
+				time{
+					text-align: left;
+				}
+			}
+			> div{
+				min-width: auto;
+				max-width: unset;
+				&.card{
+					&:before, &:after{
+						top:auto;
+						left: 18px !important;
+						right: auto !important;
+						bottom: 100% !important;
+						border-left-color: transparent !important;
+						border-right-color: transparent !important;
+					}
+					&:before{	
+						border-bottom-color: #ccc;
+						border-width: 11px;
+					}
+					&:after{
+						border-bottom-color: #fff;
+						z-index: 1;
+						left: 19px !important;
+					}
+				}
+			}
+
+			&:before{
+				left: 20px;
+				top: 4px;
+				right: unset;
+			}
+
+		}
+	}
+
+}

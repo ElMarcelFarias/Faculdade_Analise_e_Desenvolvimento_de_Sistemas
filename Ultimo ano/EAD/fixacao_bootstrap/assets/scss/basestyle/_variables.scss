@@ -1,0 +1,50 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Bootstrap Variables
+	1.1 Theme Colors
+	1.2 Font Style
+	1.3 Spaceing
+2. Custom Variables
+
+-------------------------------------------------------------------*/
+
+
+
+
+
+/*Theme Colors*/
+$theme-colors: (
+  "primary": #4B89FC,
+  "danger": #EA585A,
+  "warning": #FBB357,
+  "success": #69BA6D,
+  "info" : #48a1af,
+);
+$text-muted: #8d969e;
+
+
+/* Font Style */
+$gray-800: #343a40;
+$input-placeholder-color: #ccc;
+$font-size-base: 0.9375rem;
+$body-bg: #F5F7FA;
+$body-color: #4E565A;
+//$font-size-base: 0.875rem;
+$font-weight-base: 300;
+$font-family-sans-serif: 'GTWalsheim';
+
+
+/* Spaceing */
+$grid-gutter-width: 24px;
+
+
+
+
+
+
+
+/* Custom Variables */
+$sidebar-expand-width: 220px;
+$sidebar-collapse-width: 70px;
+

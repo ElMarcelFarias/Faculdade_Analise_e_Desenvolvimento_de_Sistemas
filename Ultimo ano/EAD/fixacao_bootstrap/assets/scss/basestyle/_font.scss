@@ -1,0 +1,47 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Font Face
+
+-------------------------------------------------------------------*/
+
+
+
+$path : '../../fonts/gt-walsheim/';
+
+
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url($path + 'GTWalsheimProTrial-Thin.eot?#iefix') format('embedded-opentype'),  url($path + 'GTWalsheimProTrial-Thin.otf')  format('opentype'),
+       url($path + 'GTWalsheimProTrial-Thin.woff') format('woff'), url($path + 'GTWalsheimProTrial-Thin.ttf')  format('truetype'), url($path + 'GTWalsheimProTrial-Thin.svg#GTWalsheimProTrial-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url($path + 'GTWalsheimLight.eot?#iefix') format('embedded-opentype'),  url($path + 'GTWalsheimLight.woff') format('woff'), url($path + 'GTWalsheimLight.ttf')  format('truetype'), url($path + 'GTWalsheimLight.svg#GTWalsheimLight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url($path + 'GTWalsheim.eot?#iefix') format('embedded-opentype'),  url($path + 'GTWalsheim.woff') format('woff'), url($path + 'GTWalsheim.ttf')  format('truetype'), url($path + 'GTWalsheim.svg#GTWalsheim') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url($path + 'GTWalsheimBold.eot?#iefix') format('embedded-opentype'),  url($path + 'GTWalsheimBold.woff') format('woff'), url($path + 'GTWalsheimBold.ttf')  format('truetype'), url($path + 'GTWalsheimBold.svg#GTWalsheimBold') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+

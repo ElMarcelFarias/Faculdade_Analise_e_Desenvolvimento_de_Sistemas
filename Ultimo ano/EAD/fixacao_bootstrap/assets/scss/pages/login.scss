@@ -1,0 +1,73 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Importing Variables
+2. Login Style
+
+-------------------------------------------------------------------*/
+
+
+
+
+@import "../basestyle/variables";
+@import "../bootstrap/bootstrap";
+
+
+.login{
+
+	min-height: 100vh;
+	display: flex;
+	/*flex-direction:row-reverse;*/
+
+	.image-placeholder{
+		background: url(../../images/989.jpg) center center;
+		background-size: cover;
+		flex:auto;
+		color: rgba(255,255,255,0.8);
+		padding: 4rem;
+		position: relative;
+		align-items: flex-end;
+		display: flex;
+		&:before{
+			content:"";
+			display: block;
+			background-color: rgba(0,0,0,0.60);
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 0;
+		}
+		h1{
+			z-index: 1;
+			position: relative;
+			font-weight: 400;
+			margin: 0px;
+			display: none;
+		}
+	}
+
+	.form{
+		width: 480px;
+		background-color: #fff;
+		padding: 6rem ;
+	}
+
+
+	@media only screen and (max-width:  map-get($grid-breakpoints, "md") ) {
+		.login{
+			display: block;
+		}
+		.image-placeholder{
+			display: none;
+		}
+		.form{
+			width: 100%;
+			@media only screen and (max-width:  map-get($grid-breakpoints, "sm") ) {
+				padding: 2rem;
+			}
+		}
+	}
+
+}
