@@ -1,4 +1,4 @@
-# Desenvolvimento de uma página web responsiva com bootstrap
+# Fixação bootstrap
 
 Projeto desenvolvido como parte da atividade EaD, com o objetivo de aprofundar o conhecimento prático na utilização do framework Bootstrap para o desenvolvimento de páginas web responsivas e eficientes.
 
@@ -11,9 +11,7 @@ Projeto desenvolvido como parte da atividade EaD, com o objetivo de aprofundar o
 ## Estrutura do Projeto
 
     
-    ├── css/
-    ├── img/
-    ├── js/
+    ├── assets/
     ├── index.html
     └── readme.md
     
