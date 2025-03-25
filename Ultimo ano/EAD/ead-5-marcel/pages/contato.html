@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato dos usuários cadastrados</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/contato.css">
+</head>
+<body>
+
+    <button onclick="goTo('../index.html')">Ir para Cadastro de Users</button>
+
+<div class="container">
+    <h1>Contato</h1>
+    <form action="your-backend-script.php" method="GET">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required placeholder="Informe o nome do usuário criado aqui.">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        Mensagem:
+        <textarea id="message" name="message" rows="" required></textarea>
+
+        <button type="submit" onclick="enviaProBack()">Enviar</button>
+    </form>
+</div>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+</html>
